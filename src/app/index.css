@@ -5,8 +5,8 @@
 @font-face {
   font-family: "Gilroy";
   src:
-    url("../assets/gilroy-bold-webfont.woff2") format("woff2"),
-    url("../assets/gilroy-bold-webfont.woff") format("woff");
+    url("../assets/fonts/gilroy-bold-webfont.woff2") format("woff2"),
+    url("../assets/fonts/gilroy-bold-webfont.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
@@ -14,8 +14,8 @@
 @font-face {
   font-family: "Gilroy";
   src:
-    url("../assets/gilroy-medium-webfont.woff2") format("woff2"),
-    url("../assets/gilroy-medium-webfont.woff") format("woff");
+    url("../assets/fonts/gilroy-medium-webfont.woff2") format("woff2"),
+    url("../assets/fonts/gilroy-medium-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -41,11 +41,23 @@ html {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+}
+
+body {
   font-size: 1.25rem;
+  box-sizing: border-box;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .primary-gradient {
+    @apply from-[#FBA05E] to-[#FFD7A8];
+  }
+
+  .text-gradient {
+    @apply primary-gradient bg-gradient-to-r bg-clip-text;
   }
 }
