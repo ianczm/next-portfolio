@@ -59,7 +59,7 @@ export default function Home() {
       {/* Hero */}
       <div className="relative">
         <Image src={HeroGurulab} alt="Gurulab" className="h-auto w-full" />
-        <div className="absolute bottom-0 px-60 pb-[210px] pt-80">
+        <div className="absolute bottom-0 p-60">
           <div className="flex max-w-[700px] flex-col gap-10">
             <h1 className="text-gradient text-6xl font-bold leading-tight tracking-tight">
               Crafting an experience means the careful blend of feel and
@@ -74,7 +74,7 @@ export default function Home() {
           <div className="absolute left-1/3 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#D17E16]/20 blur-[200px]"></div>
           <div className="absolute left-2/3 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FB8842]/20 blur-[200px]"></div>
         </div>
-        <div className="flex flex-col gap-16 px-60 pb-60 pt-80">
+        <div className="flex flex-col gap-16 p-60">
           {/* Header */}
           <div className="flex max-w-[700px] flex-col gap-10">
             <h2 className="text-gradient font-bold uppercase tracking-widest">
@@ -127,7 +127,7 @@ export default function Home() {
       </div>
       {/* Testimonials */}
       <div className="bg-[#1A1A1A]">
-        <div className="flex flex-col gap-32 px-60 pb-60 pt-80">
+        <div className="flex flex-col gap-32 p-60">
           <div className="flex flex-col gap-10">
             <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
               What Clients Said
