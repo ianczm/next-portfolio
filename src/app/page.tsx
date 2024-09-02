@@ -32,7 +32,7 @@ export default function Home() {
                 living and breathing spaces.
               </span>
             </h1>
-            <div>
+            <div className="text-2xl leading-normal">
               <p>
                 I'm a fullstack web developer. Freelanced for frontend projects.
               </p>
@@ -118,7 +118,56 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Testimonials */}
+      <div className="bg-[#1A1A1A]">
+        <div className="flex flex-col gap-32 px-60 pb-60 pt-80">
+          <div className="flex flex-col gap-10">
+            <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
+              What Clients Said
+            </h2>
+            <hr />
+          </div>
+          <div className="grid grid-cols-[1fr_2fr] gap-10">
+            <div>
+              <h3 className="mb-10 text-4xl font-bold">GuruLab</h3>
+              <p className="text-gradient font-bold">
+                <span className="text-transparent">Emily Neoh</span>
+              </p>
+              <p>Curriculum Content Lead</p>
+            </div>
+            <div className="flex flex-col gap-10">
+              <p className="text-balance text-3xl font-bold leading-relaxed">
+                I enjoyed working with Ian. He grasped the project's principles
+                and requirements quickly, delivering outcomes to a high
+                standard. I also valued the enthusiasm and excellent
+                communication that Ian brought, and would recommend his web
+                development services with no hesitation.
+              </p>
+              <div className="flex gap-2">
+                <Chip>Freelance</Chip>
+                <Chip>Full business site</Chip>
+                <Chip>Landing pages</Chip>
+                <Chip>Layout and design</Chip>
+                <Chip>Dynamic reports</Chip>
+              </div>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </div>
     </main>
+  );
+}
+
+interface ChipProps {
+  children: ReactNode;
+}
+
+function Chip({ children }: Readonly<ChipProps>) {
+  return (
+    <div className="rounded-full bg-[#FCBC84]/20 px-6 py-4 text-base font-bold leading-none text-[#FCBC84]">
+      {children}
+    </div>
   );
 }
 
@@ -136,7 +185,7 @@ function Card({ src, title, children, className }: Readonly<CardProps>) {
       <div className="absolute bottom-0 flex items-end gap-20 p-16">
         <div>
           <h3 className="mb-5 text-4xl font-bold">{title}</h3>
-          <p>{children}</p>
+          <p className="text-balance text-2xl leading-normal">{children}</p>
         </div>
         <ArrowRight className="flex-shrink-0" size={48} strokeWidth={1.5} />
       </div>
