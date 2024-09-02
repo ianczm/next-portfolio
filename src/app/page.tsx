@@ -22,8 +22,8 @@ export default function Home() {
         </div>
         <div className="px-60 pb-60 pt-80">
           <div className="flex max-w-[810px] flex-col gap-10">
-            <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
-              Hey there 👋
+            <h2 className="text-gradient font-bold uppercase tracking-widest">
+              <span className="text-transparent">Hey there</span> 👋
             </h2>
             <h1 className="text-gradient text-6xl font-bold leading-tight tracking-tight">
               I love turning <span className="text-transparent">web ideas</span>{" "}
@@ -70,8 +70,8 @@ export default function Home() {
         <div className="flex flex-col gap-16 px-60 pb-60 pt-80">
           {/* Header */}
           <div className="flex max-w-[700px] flex-col gap-10">
-            <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
-              Featured Projects
+            <h2 className="text-gradient font-bold uppercase tracking-widest">
+              <span className="text-transparent">Featured Projects</span>
             </h2>
             <h1 className="text-gradient text-6xl font-bold leading-tight tracking-tight">
               I've worked on some pretty{" "}
