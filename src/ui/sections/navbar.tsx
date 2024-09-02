@@ -1,5 +1,6 @@
 import Button from "../components/button";
 import IanczmLogo from "../components/logo";
+import NavLink from "../components/nav-link";
 
 export default function NavBar() {
   return (
@@ -8,9 +9,9 @@ export default function NavBar() {
         <IanczmLogo />
       </a>
       <div className="flex items-center gap-20">
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Projects</a>
+        <NavLink href="/">Home</NavLink>
+        <NavLink href="/about">About</NavLink>
+        <NavLink href="/projects">Projects</NavLink>
         <Button>Contact</Button>
       </div>
     </nav>
