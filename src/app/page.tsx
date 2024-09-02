@@ -3,6 +3,7 @@ import ShotdeskGurulab from "@/assets/images/shot-desk-gurulab.png";
 import ShotdeskJourneyOfLife from "@/assets/images/shot-desk-journey-of-life.png";
 import Button from "@/ui/components/button";
 import InlineLink from "@/ui/components/inline-link";
+import Footer from "@/ui/sections/footer";
 import NavBar from "@/ui/sections/navbar";
 import { cn } from "@/ui/utils/tailwind";
 import { ArrowRight } from "lucide-react";
@@ -38,8 +39,14 @@ export default function Home() {
               </p>
               <p>
                 Currently building{" "}
-                <InlineLink href="/">Java Spring Boot</InlineLink> cloud
-                services at <InlineLink href="/">Hilti</InlineLink>.
+                <InlineLink href="/" underline>
+                  Java Spring Boot
+                </InlineLink>{" "}
+                cloud services at{" "}
+                <InlineLink href="/" underline>
+                  Hilti
+                </InlineLink>
+                .
               </p>
             </div>
             <div className="mt-4 flex gap-4">
@@ -155,6 +162,8 @@ export default function Home() {
           <hr />
         </div>
       </div>
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }

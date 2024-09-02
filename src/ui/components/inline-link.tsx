@@ -1,11 +1,17 @@
 import { ComponentProps } from "react";
+import { cn } from "../utils/tailwind";
+
+interface InlineLinkProps extends ComponentProps<"a"> {
+  underline?: boolean;
+}
 
 export default function InlineLink({
+  underline,
   children,
   ...props
-}: ComponentProps<"a">) {
+}: Readonly<InlineLinkProps>) {
   return (
-    <a className="font-bold underline" {...props}>
+    <a className={cn("font-bold", { underline })} {...props}>
       {children}
     </a>
   );
