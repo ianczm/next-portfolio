@@ -1,8 +1,14 @@
 import HeroGurulab from "@/assets/images/hero-gurulab.png";
+import ShotdeskGurulab from "@/assets/images/shot-desk-gurulab.png";
+import ShotdeskJourneyOfLife from "@/assets/images/shot-desk-journey-of-life.png";
 import Button from "@/ui/components/button";
 import InlineLink from "@/ui/components/inline-link";
 import NavBar from "@/ui/sections/navbar";
+import { cn } from "@/ui/utils/tailwind";
+import { ArrowRight } from "lucide-react";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
+import { ReactNode } from "react";
 
 export default function Home() {
   return (
@@ -56,6 +62,84 @@ export default function Home() {
         </div>
       </div>
       {/* Projects */}
+      <div className="relative">
+        <div className="absolute -z-10 h-full w-full">
+          <div className="absolute left-1/3 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#D17E16]/20 blur-[200px]"></div>
+          <div className="absolute left-2/3 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FB8842]/20 blur-[200px]"></div>
+        </div>
+        <div className="flex flex-col gap-16 px-60 pb-60 pt-80">
+          {/* Header */}
+          <div className="flex max-w-[700px] flex-col gap-10">
+            <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
+              Featured Projects
+            </h2>
+            <h1 className="text-gradient text-6xl font-bold leading-tight tracking-tight">
+              I've worked on some pretty{" "}
+              <span className="text-transparent">fun projects.</span>
+            </h1>
+          </div>
+          {/* Projects container */}
+          <div className="flex gap-10">
+            <div className="flex flex-col gap-10 pt-36">
+              <Card
+                src={ShotdeskGurulab}
+                title="Gurulab"
+                className="h-[875px] w-[700px]"
+              >
+                Welcoming home page with a cheerful and bright design language
+                for an EduTech startup.
+              </Card>
+              <Card
+                src={ShotdeskJourneyOfLife}
+                title="Journey of Life"
+                className="h-[875px] w-[700px]"
+              >
+                Multiplayer game for event participants to experience the thrill
+                of financial decision-making.
+              </Card>
+            </div>
+            <div className="flex flex-col gap-10">
+              <Card
+                src={ShotdeskJourneyOfLife}
+                title="This Portfolio"
+                className="h-[875px] w-[700px]"
+              >
+                A milestone in establishing a personal brand and consolidating
+                my skills.
+              </Card>
+              <Card
+                src={ShotdeskGurulab}
+                title="More Projects"
+                className="h-[875px] w-[700px]"
+              >
+                View other exciting ideas that I've been working on.
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
+  );
+}
+
+interface CardProps {
+  src: string | StaticImport;
+  title: string;
+  children: ReactNode;
+  className: string;
+}
+
+function Card({ src, title, children, className }: Readonly<CardProps>) {
+  return (
+    <div className={cn("relative", className)}>
+      <Image src={src} alt={title} className="h-full w-full object-cover" />
+      <div className="absolute bottom-0 flex items-end gap-20 p-16">
+        <div>
+          <h3 className="mb-5 text-4xl font-bold">{title}</h3>
+          <p>{children}</p>
+        </div>
+        <ArrowRight className="flex-shrink-0" size={48} strokeWidth={1.5} />
+      </div>
+    </div>
   );
 }
