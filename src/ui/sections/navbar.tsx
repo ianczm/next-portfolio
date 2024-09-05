@@ -4,7 +4,7 @@ import NavLink from "../components/nav-link";
 
 export default function NavBar() {
   return (
-    <nav className="absolute left-0 top-0 flex w-full items-center justify-between px-60 py-20">
+    <nav className="absolute left-0 top-0 z-50 flex w-full items-center justify-between px-60 py-20">
       <a href="/">
         <IanczmLogo />
       </a>
@@ -12,7 +12,7 @@ export default function NavBar() {
         <NavLink href="/">Home</NavLink>
         <NavLink href="/about">About</NavLink>
         <NavLink href="/projects">Projects</NavLink>
-        <Button>Contact</Button>
+        <Button intent="primary">Contact</Button>
       </div>
     </nav>
   );
