@@ -50,7 +50,7 @@ export default function Home() {
               </p>
             </div>
             <div className="mt-4 flex gap-4">
-              <Button>Contact</Button>
+              <Button intent="primary">Contact</Button>
               <Button>Projects</Button>
             </div>
           </div>
