@@ -1,4 +1,5 @@
 import InlineLink from "../components/inline-link";
+import { Heading1 } from "../components/typography/heading-1";
 
 export default function Footer() {
   return (
@@ -13,9 +14,7 @@ export default function Footer() {
             <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
               Get In Touch
             </h2>
-            <h1 className="text-gradient text-6xl font-bold leading-tight tracking-tight">
-              Have an interesting opportunity to share?
-            </h1>
+            <Heading1>Have an interesting opportunity to share?</Heading1>
             <a href="/" className="text-gradient text-5xl font-bold">
               <span className="text-transparent underline">Let's talk about it!</span>
             </a>

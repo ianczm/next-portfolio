@@ -3,6 +3,7 @@ import ShotdeskGurulab from "@/assets/images/shot-desk-gurulab.png";
 import ShotdeskJourneyOfLife from "@/assets/images/shot-desk-journey-of-life.png";
 import Button from "@/ui/components/button";
 import InlineLink from "@/ui/components/inline-link";
+import { Heading1 } from "@/ui/components/typography/heading-1";
 import { Heading2 } from "@/ui/components/typography/heading-2";
 import Footer from "@/ui/sections/footer";
 import NavBar from "@/ui/sections/navbar";
@@ -27,10 +28,10 @@ export default function Home() {
             <Heading2>
               Hey, I'm Ian <span className="text-light-100">👋</span>
             </Heading2>
-            <h1 className="text-gradient text-6xl font-bold leading-tight tracking-tight">
+            <Heading1>
               I love turning <span className="text-transparent">web ideas</span> into{" "}
               <span className="text-transparent">living and breathing spaces.</span>
-            </h1>
+            </Heading1>
             <div className="text-2xl leading-normal">
               <p>I'm a fullstack web developer. Freelanced for frontend projects.</p>
               <p>
@@ -57,9 +58,9 @@ export default function Home() {
         <Image src={HeroGurulab} alt="Gurulab" className="h-auto w-full" />
         <div className="absolute bottom-0 p-60">
           <div className="flex max-w-[700px] flex-col gap-10">
-            <h1 className="text-gradient text-6xl font-bold leading-tight tracking-tight">
+            <Heading1 noGradient>
               Crafting an experience means the careful blend of feel and function.
-            </h1>
+            </Heading1>
           </div>
         </div>
       </div>
@@ -73,9 +74,9 @@ export default function Home() {
           {/* Header */}
           <div className="flex max-w-[700px] flex-col gap-10">
             <Heading2>Featured Projects</Heading2>
-            <h1 className="text-gradient text-6xl font-bold leading-tight tracking-tight">
+            <Heading1>
               I've worked on some pretty <span className="text-transparent">fun projects.</span>
-            </h1>
+            </Heading1>
           </div>
           {/* Projects container */}
           <div className="flex gap-10">
