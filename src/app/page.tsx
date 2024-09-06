@@ -3,6 +3,7 @@ import ShotdeskGurulab from "@/assets/images/shot-desk-gurulab.png";
 import ShotdeskJourneyOfLife from "@/assets/images/shot-desk-journey-of-life.png";
 import Button from "@/ui/components/button";
 import InlineLink from "@/ui/components/inline-link";
+import { Heading2 } from "@/ui/components/typography/heading-2";
 import Footer from "@/ui/sections/footer";
 import NavBar from "@/ui/sections/navbar";
 import { cn } from "@/ui/utils/tailwind";
@@ -23,9 +24,9 @@ export default function Home() {
         </div>
         <div className="px-60 pb-60 pt-80">
           <div className="flex max-w-[810px] flex-col gap-10">
-            <h2 className="text-gradient font-bold uppercase tracking-widest">
-              <span className="text-transparent">Hey, I'm Ian</span> 👋
-            </h2>
+            <Heading2>
+              Hey, I'm Ian <span className="text-light-100">👋</span>
+            </Heading2>
             <h1 className="text-gradient text-6xl font-bold leading-tight tracking-tight">
               I love turning <span className="text-transparent">web ideas</span> into{" "}
               <span className="text-transparent">living and breathing spaces.</span>
@@ -71,9 +72,7 @@ export default function Home() {
         <div className="flex flex-col gap-16 p-60">
           {/* Header */}
           <div className="flex max-w-[700px] flex-col gap-10">
-            <h2 className="text-gradient font-bold uppercase tracking-widest">
-              <span className="text-transparent">Featured Projects</span>
-            </h2>
+            <Heading2>Featured Projects</Heading2>
             <h1 className="text-gradient text-6xl font-bold leading-tight tracking-tight">
               I've worked on some pretty <span className="text-transparent">fun projects.</span>
             </h1>
@@ -113,9 +112,7 @@ export default function Home() {
       <div className="bg-dark-400">
         <div className="flex flex-col gap-32 p-60">
           <div className="flex flex-col gap-10">
-            <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
-              What Clients Said
-            </h2>
+            <Heading2>What Clients Said</Heading2>
             <hr />
           </div>
           <div className="grid grid-cols-[1fr_2fr] gap-10">
