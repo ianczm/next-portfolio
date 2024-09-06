@@ -2,6 +2,8 @@ import HeroGurulab from "@/assets/images/hero-gurulab.png";
 import ShotdeskGurulab from "@/assets/images/shot-desk-gurulab.png";
 import ShotdeskJourneyOfLife from "@/assets/images/shot-desk-journey-of-life.png";
 import Button from "@/ui/components/button";
+import { Card } from "@/ui/components/card";
+import { Chip } from "@/ui/components/chip";
 import InlineLink from "@/ui/components/inline-link";
 import { GradientText } from "@/ui/components/typography/gradient-text";
 import { Heading1 } from "@/ui/components/typography/heading-1";
@@ -11,11 +13,7 @@ import { Paragraph1, Paragraph2 } from "@/ui/components/typography/paragraph";
 import { Quote } from "@/ui/components/typography/quote";
 import Footer from "@/ui/sections/footer";
 import NavBar from "@/ui/sections/navbar";
-import { cn } from "@/ui/utils/tailwind";
-import { ArrowRight } from "lucide-react";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
-import { ReactNode } from "react";
 
 export default function Home() {
   return (
@@ -152,39 +150,5 @@ export default function Home() {
       {/* Footer */}
       <Footer />
     </main>
-  );
-}
-
-interface ChipProps {
-  children: ReactNode;
-}
-
-function Chip({ children }: Readonly<ChipProps>) {
-  return (
-    <div className="rounded-full bg-primary-400/20 px-6 py-4 text-base font-bold leading-none text-primary-400">
-      {children}
-    </div>
-  );
-}
-
-interface CardProps {
-  src: string | StaticImport;
-  title: string;
-  children: ReactNode;
-  className: string;
-}
-
-function Card({ src, title, children, className }: Readonly<CardProps>) {
-  return (
-    <div className={cn("relative", className)}>
-      <Image src={src} alt={title} className="h-full w-full object-cover" />
-      <div className="absolute bottom-0 flex items-end gap-20 p-16">
-        <div>
-          <h3 className="mb-5 text-4xl font-bold">{title}</h3>
-          <Paragraph2 className="text-balance">{children}</Paragraph2>
-        </div>
-        <ArrowRight className="flex-shrink-0" size={48} strokeWidth={1.5} />
-      </div>
-    </div>
   );
 }
