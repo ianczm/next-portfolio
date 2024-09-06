@@ -1,6 +1,12 @@
 import { Chip } from "@/ui/components/chip";
-import { Heading2, Heading3, Paragraph1, Paragraph2, Quote } from "@/ui/components/typography";
-import { GradientText } from "@/ui/components/typography/gradient-text";
+import {
+  GradientText,
+  Heading2,
+  Heading3,
+  Paragraph1,
+  Paragraph2,
+  Quote,
+} from "@/ui/components/typography";
 
 export function TestimonialsSection() {
   return (
