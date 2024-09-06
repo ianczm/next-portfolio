@@ -3,8 +3,12 @@ import ShotdeskGurulab from "@/assets/images/shot-desk-gurulab.png";
 import ShotdeskJourneyOfLife from "@/assets/images/shot-desk-journey-of-life.png";
 import Button from "@/ui/components/button";
 import InlineLink from "@/ui/components/inline-link";
+import { GradientText } from "@/ui/components/typography/gradient-text";
 import { Heading1 } from "@/ui/components/typography/heading-1";
 import { Heading2 } from "@/ui/components/typography/heading-2";
+import { Heading3 } from "@/ui/components/typography/heading-3";
+import { Paragraph1, Paragraph2 } from "@/ui/components/typography/paragraph";
+import { Quote } from "@/ui/components/typography/quote";
 import Footer from "@/ui/sections/footer";
 import NavBar from "@/ui/sections/navbar";
 import { cn } from "@/ui/utils/tailwind";
@@ -32,9 +36,11 @@ export default function Home() {
               I love turning <span className="text-transparent">web ideas</span> into{" "}
               <span className="text-transparent">living and breathing spaces.</span>
             </Heading1>
-            <div className="text-2xl leading-normal">
-              <p>I'm a fullstack web developer. Freelanced for frontend projects.</p>
-              <p>
+            <div>
+              <Paragraph2>
+                I'm a fullstack web developer. Freelanced for frontend projects.
+              </Paragraph2>
+              <Paragraph2>
                 Currently building{" "}
                 <InlineLink href="https://spring.io/projects/spring-boot" underline>
                   Java Spring Boot
@@ -44,7 +50,7 @@ export default function Home() {
                   Hilti
                 </InlineLink>
                 .
-              </p>
+              </Paragraph2>
             </div>
             <div className="mt-4 flex gap-4">
               <Button intent="primary">Contact</Button>
@@ -118,19 +124,19 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-[1fr_2fr] gap-10">
             <div>
-              <h3 className="mb-10 text-4xl font-bold">GuruLab</h3>
-              <p className="text-gradient font-bold">
-                <span className="text-transparent">Emily Neoh</span>
-              </p>
-              <p>Curriculum Content Lead</p>
+              <Heading3>GuruLab</Heading3>
+              <GradientText as={Paragraph2} className="font-bold">
+                Emily Neoh
+              </GradientText>
+              <Paragraph1>Curriculum Content Lead</Paragraph1>
             </div>
             <div className="flex flex-col gap-10">
-              <p className="text-balance text-3xl font-bold leading-relaxed">
+              <Quote>
                 I enjoyed working with Ian. He grasped the project's principles and requirements
                 quickly, delivering outcomes to a high standard. I also valued the enthusiasm and
                 excellent communication that Ian brought, and would recommend his web development
                 services with no hesitation.
-              </p>
+              </Quote>
               <div className="flex gap-2">
                 <Chip>Freelance</Chip>
                 <Chip>Full business site</Chip>
@@ -175,7 +181,7 @@ function Card({ src, title, children, className }: Readonly<CardProps>) {
       <div className="absolute bottom-0 flex items-end gap-20 p-16">
         <div>
           <h3 className="mb-5 text-4xl font-bold">{title}</h3>
-          <p className="text-balance text-2xl leading-normal">{children}</p>
+          <Paragraph2 className="text-balance">{children}</Paragraph2>
         </div>
         <ArrowRight className="flex-shrink-0" size={48} strokeWidth={1.5} />
       </div>

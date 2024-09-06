@@ -1,5 +1,6 @@
 import InlineLink from "../components/inline-link";
 import { Heading1 } from "../components/typography/heading-1";
+import { Paragraph1 } from "../components/typography/paragraph";
 
 export default function Footer() {
   return (
@@ -14,7 +15,7 @@ export default function Footer() {
             <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
               Get In Touch
             </h2>
-            <Heading1>Have an interesting opportunity to share?</Heading1>
+            <Heading1 noGradient>Have an interesting opportunity to share?</Heading1>
             <a href="/" className="text-gradient text-5xl font-bold">
               <span className="text-transparent underline">Let's talk about it!</span>
             </a>
@@ -81,15 +82,15 @@ export default function Footer() {
             </a>
           </div>
           <div className="w-[500px]">
-            <p>
+            <Paragraph1>
               Designed in <InlineLink href="https://www.figma.com/">Figma.</InlineLink> Built with{" "}
               <InlineLink href="https://react.dev/">React</InlineLink> and{" "}
               <InlineLink href="https://nextjs.org/">Next.js</InlineLink>.
-            </p>
-            <p>
+            </Paragraph1>
+            <Paragraph1>
               Styled with <InlineLink href="https://tailwindcss.com/">Tailwind CSS</InlineLink> and
               lots of <InlineLink>love</InlineLink>.
-            </p>
+            </Paragraph1>
           </div>
         </div>
       </div>

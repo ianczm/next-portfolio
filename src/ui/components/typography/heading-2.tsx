@@ -1,12 +1,12 @@
-import { cn } from "@/ui/utils/tailwind";
 import { ComponentProps } from "react";
+import { GradientText } from "./gradient-text";
 
 interface Heading2Props extends ComponentProps<"h2"> {}
 
 export function Heading2({ children, className, ...props }: Heading2Props) {
   return (
-    <h2 className={cn("text-gradient font-bold uppercase tracking-widest", className)} {...props}>
-      <span className="text-transparent">{children}</span>
-    </h2>
+    <GradientText as="h2" className="font-bold uppercase tracking-widest" {...props}>
+      {children}
+    </GradientText>
   );
 }
