@@ -1,12 +1,6 @@
 export default function IanczmLogo() {
   return (
-    <svg
-      width="87"
-      height="18"
-      viewBox="0 0 87 18"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="87" height="18" viewBox="0 0 87 18" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M3.66477 16.9022H0V0.699951L3.66477 2.69768V16.9022Z"
         fill="url(#paint0_linear_410_751)"

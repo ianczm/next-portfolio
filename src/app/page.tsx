@@ -27,23 +27,18 @@ export default function Home() {
               <span className="text-transparent">Hey, I'm Ian</span> 👋
             </h2>
             <h1 className="text-gradient text-6xl font-bold leading-tight tracking-tight">
-              I love turning <span className="text-transparent">web ideas</span>{" "}
-              into{" "}
-              <span className="text-transparent">
-                living and breathing spaces.
-              </span>
+              I love turning <span className="text-transparent">web ideas</span> into{" "}
+              <span className="text-transparent">living and breathing spaces.</span>
             </h1>
             <div className="text-2xl leading-normal">
-              <p>
-                I'm a fullstack web developer. Freelanced for frontend projects.
-              </p>
+              <p>I'm a fullstack web developer. Freelanced for frontend projects.</p>
               <p>
                 Currently building{" "}
-                <InlineLink href="/" underline>
+                <InlineLink href="https://spring.io/projects/spring-boot" underline>
                   Java Spring Boot
                 </InlineLink>{" "}
                 cloud services at{" "}
-                <InlineLink href="/" underline>
+                <InlineLink href="https://www.hilti.com/" underline>
                   Hilti
                 </InlineLink>
                 .
@@ -62,8 +57,7 @@ export default function Home() {
         <div className="absolute bottom-0 p-60">
           <div className="flex max-w-[700px] flex-col gap-10">
             <h1 className="text-gradient text-6xl font-bold leading-tight tracking-tight">
-              Crafting an experience means the careful blend of feel and
-              function.
+              Crafting an experience means the careful blend of feel and function.
             </h1>
           </div>
         </div>
@@ -81,28 +75,23 @@ export default function Home() {
               <span className="text-transparent">Featured Projects</span>
             </h2>
             <h1 className="text-gradient text-6xl font-bold leading-tight tracking-tight">
-              I've worked on some pretty{" "}
-              <span className="text-transparent">fun projects.</span>
+              I've worked on some pretty <span className="text-transparent">fun projects.</span>
             </h1>
           </div>
           {/* Projects container */}
           <div className="flex gap-10">
             <div className="flex flex-col gap-10 pt-36">
-              <Card
-                src={ShotdeskGurulab}
-                title="Gurulab"
-                className="h-[875px] w-[700px]"
-              >
-                Welcoming home page with a cheerful and bright design language
-                for an EduTech startup.
+              <Card src={ShotdeskGurulab} title="Gurulab" className="h-[875px] w-[700px]">
+                Welcoming home page with a cheerful and bright design language for an EduTech
+                startup.
               </Card>
               <Card
                 src={ShotdeskJourneyOfLife}
                 title="Journey of Life"
                 className="h-[875px] w-[700px]"
               >
-                Multiplayer game for event participants to experience the thrill
-                of financial decision-making.
+                Multiplayer game for event participants to experience the thrill of financial
+                decision-making.
               </Card>
             </div>
             <div className="flex flex-col gap-10">
@@ -111,14 +100,9 @@ export default function Home() {
                 title="This Portfolio"
                 className="h-[875px] w-[700px]"
               >
-                A milestone in establishing a personal brand and consolidating
-                my skills.
+                A milestone in establishing a personal brand and consolidating my skills.
               </Card>
-              <Card
-                src={ShotdeskGurulab}
-                title="More Projects"
-                className="h-[875px] w-[700px]"
-              >
+              <Card src={ShotdeskGurulab} title="More Projects" className="h-[875px] w-[700px]">
                 View other exciting ideas that I've been working on.
               </Card>
             </div>
@@ -144,11 +128,10 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-10">
               <p className="text-balance text-3xl font-bold leading-relaxed">
-                I enjoyed working with Ian. He grasped the project's principles
-                and requirements quickly, delivering outcomes to a high
-                standard. I also valued the enthusiasm and excellent
-                communication that Ian brought, and would recommend his web
-                development services with no hesitation.
+                I enjoyed working with Ian. He grasped the project's principles and requirements
+                quickly, delivering outcomes to a high standard. I also valued the enthusiasm and
+                excellent communication that Ian brought, and would recommend his web development
+                services with no hesitation.
               </p>
               <div className="flex gap-2">
                 <Chip>Freelance</Chip>
@@ -174,7 +157,7 @@ interface ChipProps {
 
 function Chip({ children }: Readonly<ChipProps>) {
   return (
-    <div className="bg-primary-400/20 rounded-full px-6 py-4 text-base font-bold leading-none text-primary-400">
+    <div className="rounded-full bg-primary-400/20 px-6 py-4 text-base font-bold leading-none text-primary-400">
       {children}
     </div>
   );

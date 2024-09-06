@@ -17,9 +17,7 @@ export default function Footer() {
               Have an interesting opportunity to share?
             </h1>
             <a href="/" className="text-gradient text-5xl font-bold">
-              <span className="text-transparent underline">
-                Let's talk about it!
-              </span>
+              <span className="text-transparent underline">Let's talk about it!</span>
             </a>
           </div>
           <div className="flex w-[500px] gap-10">
@@ -85,18 +83,13 @@ export default function Footer() {
           </div>
           <div className="w-[500px]">
             <p>
-              Designed in{" "}
-              <InlineLink href="https://www.figma.com/">Figma.</InlineLink>{" "}
-              Built with{" "}
+              Designed in <InlineLink href="https://www.figma.com/">Figma.</InlineLink> Built with{" "}
               <InlineLink href="https://react.dev/">React</InlineLink> and{" "}
               <InlineLink href="https://nextjs.org/">Next.js</InlineLink>.
             </p>
             <p>
-              Styled with{" "}
-              <InlineLink href="https://tailwindcss.com/">
-                Tailwind CSS
-              </InlineLink>{" "}
-              and lots of <InlineLink>love</InlineLink>.
+              Styled with <InlineLink href="https://tailwindcss.com/">Tailwind CSS</InlineLink> and
+              lots of <InlineLink>love</InlineLink>.
             </p>
           </div>
         </div>
