@@ -4,11 +4,4 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": "always"
   },
-  "files.associations": {
-    "/src/app/index.css": "tailwindcss"
-  },
-  "tailwindCSS.experimental.classRegex": [
-    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-    ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-  ]
 }

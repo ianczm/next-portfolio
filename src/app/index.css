@@ -21,13 +21,16 @@
 }
 
 :root {
-  --color-bg: #0d0d0d;
-  --color-fg: #ffffff;
+  --color-dark-400: 26 26 26;
+  --color-dark-800: 13 13 13;
+  --color-light-100: 255 255 255;
+  --color-primary-400: 252 188 132;
+  --color-primary-600: 251 160 94;
 }
 
 html {
-  background-color: var(--color-bg);
-  color: var(--color-fg);
+  background-color: rgb(var(--color-dark-800));
+  color: rgb(var(--color-light-100));
   font-family:
     "Gilroy",
     system-ui,
@@ -54,7 +57,7 @@ body {
   }
 
   .primary-gradient {
-    @apply from-[#FBA05E] to-[#FFD7A8];
+    @apply from-primary-600 to-primary-400;
   }
 
   .text-gradient {

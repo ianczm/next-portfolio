@@ -24,7 +24,7 @@ export default function Home() {
         <div className="px-60 pb-60 pt-80">
           <div className="flex max-w-[810px] flex-col gap-10">
             <h2 className="text-gradient font-bold uppercase tracking-widest">
-              <span className="text-transparent">Hey there</span> 👋
+              <span className="text-transparent">Hey, I'm Ian</span> 👋
             </h2>
             <h1 className="text-gradient text-6xl font-bold leading-tight tracking-tight">
               I love turning <span className="text-transparent">web ideas</span>{" "}
@@ -126,7 +126,7 @@ export default function Home() {
         </div>
       </div>
       {/* Testimonials */}
-      <div className="bg-[#1A1A1A]">
+      <div className="bg-dark-400">
         <div className="flex flex-col gap-32 p-60">
           <div className="flex flex-col gap-10">
             <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
@@ -174,7 +174,7 @@ interface ChipProps {
 
 function Chip({ children }: Readonly<ChipProps>) {
   return (
-    <div className="rounded-full bg-[#FCBC84]/20 px-6 py-4 text-base font-bold leading-none text-[#FCBC84]">
+    <div className="bg-primary-400/20 rounded-full px-6 py-4 text-base font-bold leading-none text-primary-400">
       {children}
     </div>
   );

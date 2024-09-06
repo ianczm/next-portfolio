@@ -11,7 +11,12 @@ export default function InlineLink({
   ...props
 }: Readonly<InlineLinkProps>) {
   return (
-    <a className={cn("font-bold", { underline })} {...props}>
+    <a
+      className={cn("font-bold transition-all hover:text-primary-400", {
+        underline,
+      })}
+      {...props}
+    >
       {children}
     </a>
   );

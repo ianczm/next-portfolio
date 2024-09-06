@@ -8,14 +8,14 @@ const buttonStyles = cva(
       intent: {
         primary: [
           "border-transparent",
-          "bg-[#FCBC84]/20 hover:bg-[#FCBC84]",
-          "text-[#FCBC84] hover:text-[#0D0D0D]",
-          "shadow-2xl shadow-[#FCBC84]/10 hover:shadow-[#FCBC84]/60",
+          "bg-primary-400/20 hover:bg-primary-400",
+          "text-primary-400 hover:text-dark-800",
+          "shadow-2xl shadow-primary-400/10 hover:shadow-primary-400/60",
         ],
         secondary: [
-          "border-[#FCBC84]/25 hover:border-[#FCBC84]",
-          "shadow-2xl shadow-[#FCBC84]/10 hover:shadow-[#FCBC84]/20",
-          "bg-transparent hover:bg-[#FCBC84]/10",
+          "border-primary-400/25 hover:border-primary-400",
+          "shadow-2xl shadow-primary-400/10 hover:shadow-primary-400/20",
+          "bg-transparent hover:bg-primary-400/10",
         ],
       },
     },
