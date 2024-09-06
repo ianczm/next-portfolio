@@ -85,13 +85,18 @@ export default function Footer() {
           </div>
           <div className="w-[500px]">
             <p>
-              Designed in <InlineLink>Figma.</InlineLink> Built with{" "}
-              <InlineLink>React</InlineLink> and{" "}
-              <InlineLink>Next.js</InlineLink>.
+              Designed in{" "}
+              <InlineLink href="https://www.figma.com/">Figma.</InlineLink>{" "}
+              Built with{" "}
+              <InlineLink href="https://react.dev/">React</InlineLink> and{" "}
+              <InlineLink href="https://nextjs.org/">Next.js</InlineLink>.
             </p>
             <p>
-              Styled with <InlineLink>Tailwind CSS</InlineLink> and lots of{" "}
-              <InlineLink>love</InlineLink>.
+              Styled with{" "}
+              <InlineLink href="https://tailwindcss.com/">
+                Tailwind CSS
+              </InlineLink>{" "}
+              and lots of <InlineLink>love</InlineLink>.
             </p>
           </div>
         </div>

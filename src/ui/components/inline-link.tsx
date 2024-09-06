@@ -8,6 +8,7 @@ interface InlineLinkProps extends ComponentProps<"a"> {
 export default function InlineLink({
   underline,
   children,
+  target,
   ...props
 }: Readonly<InlineLinkProps>) {
   return (
@@ -15,6 +16,7 @@ export default function InlineLink({
       className={cn("font-bold transition-all hover:text-primary-400", {
         underline,
       })}
+      target={target ?? "_blank"}
       {...props}
     >
       {children}
