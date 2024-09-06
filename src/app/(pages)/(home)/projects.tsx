@@ -1,9 +1,14 @@
-import ShotdeskGurulab from "@/assets/images/shot-desk-gurulab.png";
-import ShotdeskJourneyOfLife from "@/assets/images/shot-desk-journey-of-life.png";
+import { HOME_PROJECTS } from "@/data/frontend/projects";
 import { Card } from "@/ui/components/card";
 import { Heading1, Heading2 } from "@/ui/components/typography";
+import { cn } from "@/ui/utils/tailwind";
 
 export function ProjectsSection() {
+  const projectColumns = [
+    [HOME_PROJECTS[0], HOME_PROJECTS[1]],
+    [HOME_PROJECTS[2], HOME_PROJECTS[3]],
+  ];
+
   return (
     <div className="relative">
       <div className="absolute -z-10 h-full w-full">
@@ -20,31 +25,20 @@ export function ProjectsSection() {
         </div>
         {/* Projects container */}
         <div className="flex gap-10">
-          <div className="flex flex-col gap-10 pt-36">
-            <Card src={ShotdeskGurulab} title="Gurulab" className="h-[875px] w-[700px]">
-              Welcoming home page with a cheerful and bright design language for an EduTech startup.
-            </Card>
-            <Card
-              src={ShotdeskJourneyOfLife}
-              title="Journey of Life"
-              className="h-[875px] w-[700px]"
-            >
-              Multiplayer game for event participants to experience the thrill of financial
-              decision-making.
-            </Card>
-          </div>
-          <div className="flex flex-col gap-10">
-            <Card
-              src={ShotdeskJourneyOfLife}
-              title="This Portfolio"
-              className="h-[875px] w-[700px]"
-            >
-              A milestone in establishing a personal brand and consolidating my skills.
-            </Card>
-            <Card src={ShotdeskGurulab} title="More Projects" className="h-[875px] w-[700px]">
-              View other exciting ideas that I've been working on.
-            </Card>
-          </div>
+          {projectColumns.map((column, index) => (
+            <div key={index} className={cn(`flex flex-col gap-10`, { "pt-36": index === 0 })}>
+              {column.map((project) => (
+                <Card
+                  key={project.id}
+                  src={project.image}
+                  title={project.title}
+                  className="h-[875px] w-[700px]"
+                >
+                  {project.description}
+                </Card>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </div>

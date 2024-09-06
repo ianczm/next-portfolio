@@ -1,3 +1,4 @@
+import { HOME_TESTIMONIALS } from "@/data/frontend/testimonials";
 import { Chip } from "@/ui/components/chip";
 import {
   GradientText,
@@ -16,30 +17,25 @@ export function TestimonialsSection() {
           <Heading2>What Clients Said</Heading2>
           <hr />
         </div>
-        <div className="grid grid-cols-[1fr_2fr] gap-10">
-          <div>
-            <Heading3>GuruLab</Heading3>
-            <GradientText as={Paragraph2} className="font-bold">
-              Emily Neoh
-            </GradientText>
-            <Paragraph1>Curriculum Content Lead</Paragraph1>
-          </div>
-          <div className="flex flex-col gap-10">
-            <Quote>
-              I enjoyed working with Ian. He grasped the project's principles and requirements
-              quickly, delivering outcomes to a high standard. I also valued the enthusiasm and
-              excellent communication that Ian brought, and would recommend his web development
-              services with no hesitation.
-            </Quote>
-            <div className="flex gap-2">
-              <Chip>Freelance</Chip>
-              <Chip>Full business site</Chip>
-              <Chip>Landing pages</Chip>
-              <Chip>Layout and design</Chip>
-              <Chip>Dynamic reports</Chip>
+        {HOME_TESTIMONIALS.map((testimonial) => (
+          <div key={testimonial.id} className="grid grid-cols-[1fr_2fr] gap-10">
+            <div>
+              <Heading3>{testimonial.project}</Heading3>
+              <GradientText as={Paragraph2} className="font-bold">
+                {testimonial.clientName}
+              </GradientText>
+              <Paragraph1>{testimonial.clientTitle}</Paragraph1>
+            </div>
+            <div className="flex flex-col gap-10">
+              <Quote>{testimonial.quote}</Quote>
+              <div className="flex gap-2">
+                {testimonial.tags.map((tag, index) => (
+                  <Chip key={index}>{tag}</Chip>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+        ))}
         <hr />
       </div>
     </div>
