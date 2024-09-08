@@ -9,8 +9,8 @@ export function LandingSection() {
         <div className="absolute left-1/3 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#D17E16]/20 blur-[200px]"></div>
         <div className="absolute left-2/3 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FB8842]/20 blur-[200px]"></div>
       </div>
-      <div className="px-60 pb-60 pt-80">
-        <div className="flex max-w-[810px] flex-col gap-10">
+      <div className="flex h-screen flex-col justify-center px-60">
+        <div className="mt-20 flex max-w-[810px] flex-col gap-10">
           <Heading2>
             Hey, I'm Ian <span className="text-light-100">👋</span>
           </Heading2>
