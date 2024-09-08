@@ -5,14 +5,14 @@ import { ShaderGradient, ShaderGradientCanvas } from "shadergradient";
 
 const meshOptions = {
   uSpeed: 0.1,
-  uStrength: 0.4,
-  uDensity: 3.3,
+  uStrength: 0.3,
+  uDensity: 3,
 };
 
 const colorOptions = {
-  color1: "#fab97f",
+  color1: "#0D0D0D",
   color2: "#3d1c00",
-  color3: "#0D0D0D",
+  color3: "#fab97f",
 };
 
 const cameraPosition = {
@@ -22,17 +22,14 @@ const cameraPosition = {
 };
 
 const objectPosition = {
-  positionX: -0.9,
-  positionY: -0.3,
-  positionZ: 0,
   rotationX: 20,
-  rotationY: -10,
-  rotationZ: 20,
+  rotationY: 3,
+  rotationZ: 40,
 };
 
 export default function LandingCanvas3D() {
   return (
-    <ShaderGradientCanvas importedFiber={{ ...fiber }} pixelDensity={1.4} fov={15}>
+    <ShaderGradientCanvas importedFiber={{ ...fiber }} pixelDensity={1.4} fov={20}>
       <ShaderGradient
         {...meshOptions}
         {...colorOptions}
