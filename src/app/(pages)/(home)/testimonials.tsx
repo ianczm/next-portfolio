@@ -28,7 +28,7 @@ export function TestimonialsSection() {
             </div>
             <div className="flex flex-col gap-10">
               <Quote>{testimonial.quote}</Quote>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 {testimonial.tags.map((tag, index) => (
                   <Chip key={index}>{tag}</Chip>
                 ))}
