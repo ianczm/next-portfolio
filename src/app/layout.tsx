@@ -1,3 +1,4 @@
+import { SmoothScroll } from "@/lib/frontend/smooth-scroll";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import "./index.css";
@@ -14,7 +15,9 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <SmoothScroll>
+        <body>{children}</body>
+      </SmoothScroll>
     </html>
   );
 }
