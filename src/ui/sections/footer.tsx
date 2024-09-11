@@ -1,11 +1,13 @@
+import { ComponentProps } from "react";
 import InlineLink from "../components/inline-link";
 import NavLink from "../components/nav-link";
 import { Heading1 } from "../components/typography/heading-1";
 import { Paragraph1 } from "../components/typography/paragraph";
+import { cn } from "../utils/tailwind";
 
-export default function Footer() {
+export default function Footer({ className, ...props }: ComponentProps<"div">) {
   return (
-    <div className="flex flex-col gap-32 p-60 pb-40">
+    <div className={cn("flex flex-col gap-32 p-60 pb-40")} {...props}>
       <div className="flex gap-24">
         <div className="flex max-w-[810px] flex-col gap-10">
           <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">

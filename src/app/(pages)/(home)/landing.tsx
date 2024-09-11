@@ -1,11 +1,16 @@
 import Button from "@/ui/components/button";
 import InlineLink from "@/ui/components/inline-link";
 import { Heading1, Heading2, Paragraph2 } from "@/ui/components/typography";
+import { cn } from "@/ui/utils/tailwind";
 import { SiGithub, SiGmail, SiInstagram, SiLinkedin } from "@icons-pack/react-simple-icons";
+import { ComponentProps } from "react";
 
-export function LandingSection() {
+export function LandingSection({ className, ...props }: ComponentProps<"div">) {
   return (
-    <div className="my-auto flex h-screen flex-col justify-center px-60">
+    <div
+      className={cn("my-auto flex h-screen flex-col justify-center px-60", className)}
+      {...props}
+    >
       <div className="mt-20 flex items-center justify-between">
         {/* Main landing */}
         <div className="flex max-w-[810px] flex-col gap-10">

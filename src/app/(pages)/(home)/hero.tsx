@@ -1,10 +1,12 @@
 import HeroGurulab from "@/assets/images/hero-gurulab.png";
 import { Heading1 } from "@/ui/components/typography";
+import { cn } from "@/ui/utils/tailwind";
 import Image from "next/image";
+import { ComponentProps } from "react";
 
-export function HeroBanner() {
+export function HeroBanner({ className, ...props }: ComponentProps<"div">) {
   return (
-    <div className="relative">
+    <div className={cn("relative", className)} {...props}>
       <Image src={HeroGurulab} alt="Gurulab" className="h-auto w-full" />
       <div className="absolute bottom-0 p-60">
         <div className="flex max-w-[700px] flex-col gap-10">

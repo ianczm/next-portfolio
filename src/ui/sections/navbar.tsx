@@ -1,11 +1,19 @@
+import { ComponentProps } from "react";
 import Button from "../components/button";
 import InlineLink from "../components/inline-link";
 import IanczmLogo from "../components/logo";
 import NavLink from "../components/nav-link";
+import { cn } from "../utils/tailwind";
 
-export default function NavBar() {
+export default function NavBar({ className, ...props }: ComponentProps<"div">) {
   return (
-    <nav className="absolute left-0 top-0 z-50 flex w-full items-center justify-between px-60 py-20">
+    <nav
+      className={cn(
+        "absolute left-0 top-0 z-50 flex w-full items-center justify-between px-60 py-20",
+        className,
+      )}
+      {...props}
+    >
       <InlineLink href="/" className="-m-4 p-4">
         <IanczmLogo />
       </InlineLink>

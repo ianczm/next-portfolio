@@ -12,9 +12,9 @@ export default function Home() {
       <LandingCanvas3D className="fixed -z-50 h-screen w-screen" />
       <NavBar />
       <LandingSection />
-      <HeroBanner />
+      <HeroBanner className="shadow-2xl" />
       <ProjectsSection />
-      <TestimonialsSection />
+      <TestimonialsSection className="shadow-2xl" />
       <Footer />
     </main>
   );

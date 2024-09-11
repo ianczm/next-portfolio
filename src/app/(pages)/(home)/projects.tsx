@@ -2,15 +2,16 @@ import { HOME_PROJECTS } from "@/data/frontend/projects";
 import { Card } from "@/ui/components/card";
 import { Heading1, Heading2 } from "@/ui/components/typography";
 import { cn } from "@/ui/utils/tailwind";
+import { ComponentProps } from "react";
 
-export function ProjectsSection() {
+export function ProjectsSection({ className, ...props }: ComponentProps<"div">) {
   const projectColumns = [
     [HOME_PROJECTS[0], HOME_PROJECTS[1]],
     [HOME_PROJECTS[2], HOME_PROJECTS[3]],
   ];
 
   return (
-    <div className="flex flex-col gap-16 p-60">
+    <div className={cn("flex flex-col gap-16 p-60", className)} {...props}>
       {/* Header */}
       <div className="flex max-w-[700px] flex-col gap-10">
         <Heading2>Featured Projects</Heading2>
@@ -27,7 +28,7 @@ export function ProjectsSection() {
                 key={project.id}
                 src={project.image}
                 title={project.title}
-                className="h-[875px] w-[700px]"
+                className="h-[875px] w-[700px] shadow-xl"
               >
                 {project.description}
               </Card>

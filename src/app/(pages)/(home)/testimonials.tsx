@@ -8,10 +8,12 @@ import {
   Paragraph2,
   Quote,
 } from "@/ui/components/typography";
+import { cn } from "@/ui/utils/tailwind";
+import { ComponentProps } from "react";
 
-export function TestimonialsSection() {
+export function TestimonialsSection({ className, ...props }: ComponentProps<"div">) {
   return (
-    <div className="bg-dark-400">
+    <div className={cn("bg-dark-400", className)} {...props}>
       <div className="flex flex-col gap-32 p-60">
         <div className="flex flex-col gap-10">
           <Heading2>What Clients Said</Heading2>
