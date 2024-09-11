@@ -15,7 +15,7 @@ export function TestimonialsSection() {
       <div className="flex flex-col gap-32 p-60">
         <div className="flex flex-col gap-10">
           <Heading2>What Clients Said</Heading2>
-          <hr />
+          <hr className="border-light-100/40" />
         </div>
         {HOME_TESTIMONIALS.map((testimonial) => (
           <div key={testimonial.id} className="grid grid-cols-[1fr_2fr] gap-10">
@@ -36,7 +36,7 @@ export function TestimonialsSection() {
             </div>
           </div>
         ))}
-        <hr />
+        <hr className="border-light-100/40" />
       </div>
     </div>
   );
