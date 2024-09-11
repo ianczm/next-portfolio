@@ -40,18 +40,18 @@ export function LandingSection() {
         {/* Channels */}
         <div className="flex h-full flex-col items-center gap-10">
           <div className="h-full w-[1px] bg-light-100/40"></div>
-          <a href="/">
+          <InlineLink href="/" className="-m-4 p-4">
             <SiGithub size={20} />
-          </a>
-          <a href="/">
+          </InlineLink>
+          <InlineLink href="/" className="-m-4 p-4">
             <SiLinkedin size={20} />
-          </a>
-          <a href="/">
+          </InlineLink>
+          <InlineLink href="/" className="-m-4 p-4">
             <SiInstagram size={20} />
-          </a>
-          <a href="/">
+          </InlineLink>
+          <InlineLink href="/" className="-m-4 p-4">
             <SiGmail size={20} />
-          </a>
+          </InlineLink>
           <div className="h-full w-[1px] bg-light-100/40"></div>
         </div>
       </div>

@@ -6,6 +6,7 @@ interface InlineLinkProps extends ComponentProps<"a"> {
 }
 
 export default function InlineLink({
+  className,
   underline,
   children,
   target,
@@ -13,7 +14,7 @@ export default function InlineLink({
 }: Readonly<InlineLinkProps>) {
   return (
     <a
-      className={cn("font-bold transition-all hover:text-primary-400", {
+      className={cn("font-bold transition-all hover:text-primary-400", className, {
         underline,
       })}
       target={target ?? "_blank"}
