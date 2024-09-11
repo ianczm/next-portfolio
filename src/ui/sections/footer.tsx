@@ -7,8 +7,9 @@ import { cn } from "../utils/tailwind";
 
 export default function Footer({ className, ...props }: ComponentProps<"div">) {
   return (
-    <div className={cn("flex flex-col gap-32 p-60 pb-40")} {...props}>
-      <div className="flex gap-24">
+    <div className={cn("flex gap-32 p-60 pb-40")} {...props}>
+      {/* Top */}
+      <div className="flex flex-col justify-between gap-32">
         <div className="flex max-w-[810px] flex-col gap-10">
           <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
             Get In Touch
@@ -18,6 +19,15 @@ export default function Footer({ className, ...props }: ComponentProps<"div">) {
             <span className="text-transparent underline">Let's talk about it!</span>
           </a>
         </div>
+        <div className="flex gap-6">
+          <InlineLink href="">
+            <span className="text-primary-400">@ 2024</span> Ian Chong.
+          </InlineLink>
+          <InlineLink href="">Privacy Policy.</InlineLink>
+        </div>
+      </div>
+      {/* Bottom */}
+      <div className="flex flex-col justify-between gap-32">
         <div className="flex w-[500px] gap-10">
           <div className="flex w-full flex-col gap-10">
             <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
@@ -54,14 +64,6 @@ export default function Footer({ className, ...props }: ComponentProps<"div">) {
               </li>
             </ul>
           </div>
-        </div>
-      </div>
-      <div className="flex items-end justify-between">
-        <div className="flex gap-6">
-          <InlineLink href="">
-            <span className="text-primary-400">@ 2024</span> Ian Chong.
-          </InlineLink>
-          <InlineLink href="">Privacy Policy.</InlineLink>
         </div>
         <div className="w-[500px]">
           <Paragraph1>
