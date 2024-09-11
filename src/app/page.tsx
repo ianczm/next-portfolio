@@ -1,3 +1,4 @@
+import LandingCanvas3D from "@/ui/components/3d/landing-canvas";
 import Footer from "@/ui/sections/footer";
 import NavBar from "@/ui/sections/navbar";
 import { HeroBanner } from "./(pages)/(home)/hero";
@@ -7,7 +8,8 @@ import { TestimonialsSection } from "./(pages)/(home)/testimonials";
 
 export default function Home() {
   return (
-    <main>
+    <main className="relative">
+      <LandingCanvas3D className="fixed -z-50 h-screen w-screen" />
       <NavBar />
       <LandingSection />
       <HeroBanner />

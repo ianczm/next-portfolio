@@ -1,4 +1,3 @@
-import LandingCanvas3D from "../components/3d/landing-canvas";
 import InlineLink from "../components/inline-link";
 import NavLink from "../components/nav-link";
 import { Heading1 } from "../components/typography/heading-1";
@@ -6,90 +5,85 @@ import { Paragraph1 } from "../components/typography/paragraph";
 
 export default function Footer() {
   return (
-    <div className="relative">
-      <div className="absolute -z-10 h-full w-full">
-        <LandingCanvas3D />
-      </div>
-      <div className="flex flex-col gap-32 p-60 pb-40">
-        <div className="flex gap-24">
-          <div className="flex max-w-[810px] flex-col gap-10">
+    <div className="flex flex-col gap-32 p-60 pb-40">
+      <div className="flex gap-24">
+        <div className="flex max-w-[810px] flex-col gap-10">
+          <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
+            Get In Touch
+          </h2>
+          <Heading1 noGradient>Have an interesting opportunity to share?</Heading1>
+          <a href="/" className="text-gradient text-5xl font-bold">
+            <span className="text-transparent underline">Let's talk about it!</span>
+          </a>
+        </div>
+        <div className="flex w-[500px] gap-10">
+          <div className="flex w-full flex-col gap-10">
             <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
-              Get In Touch
+              Explore
             </h2>
-            <Heading1 noGradient>Have an interesting opportunity to share?</Heading1>
-            <a href="/" className="text-gradient text-5xl font-bold">
-              <span className="text-transparent underline">Let's talk about it!</span>
-            </a>
+            <ul className="flex flex-col gap-5 text-2xl font-bold">
+              <li>
+                <NavLink href="/">Home</NavLink>
+              </li>
+              <li>
+                <NavLink href="/about">About</NavLink>
+              </li>
+              <li>
+                <NavLink href="/about">Projects</NavLink>
+              </li>
+            </ul>
           </div>
-          <div className="flex w-[500px] gap-10">
-            <div className="flex w-full flex-col gap-10">
-              <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
-                Explore
-              </h2>
-              <ul className="flex flex-col gap-5 text-2xl font-bold">
-                <li>
-                  <NavLink href="/">Home</NavLink>
-                </li>
-                <li>
-                  <NavLink href="/about">About</NavLink>
-                </li>
-                <li>
-                  <NavLink href="/about">Projects</NavLink>
-                </li>
-              </ul>
-            </div>
-            <div className="flex w-full flex-col gap-10">
-              <h2 className="text-gradient text-xl font-bold uppercase tracking-widest text-transparent">
-                Connect
-              </h2>
-              <ul className="flex flex-col gap-5 text-2xl font-bold">
-                <li>
-                  <InlineLink href="">GitHub</InlineLink>
-                </li>
-                <li>
-                  <InlineLink href="">LinkedIn</InlineLink>
-                </li>
-                <li>
-                  <InlineLink href="">Instagram</InlineLink>
-                </li>
-                <li>
-                  <InlineLink href="">Email</InlineLink>
-                </li>
-              </ul>
-            </div>
+          <div className="flex w-full flex-col gap-10">
+            <h2 className="text-gradient text-xl font-bold uppercase tracking-widest text-transparent">
+              Connect
+            </h2>
+            <ul className="flex flex-col gap-5 text-2xl font-bold">
+              <li>
+                <InlineLink href="">GitHub</InlineLink>
+              </li>
+              <li>
+                <InlineLink href="">LinkedIn</InlineLink>
+              </li>
+              <li>
+                <InlineLink href="">Instagram</InlineLink>
+              </li>
+              <li>
+                <InlineLink href="">Email</InlineLink>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="flex items-end justify-between">
-          <div className="flex gap-6">
-            <InlineLink href="">
-              <span className="text-primary-400">@ 2024</span> Ian Chong.
+      </div>
+      <div className="flex items-end justify-between">
+        <div className="flex gap-6">
+          <InlineLink href="">
+            <span className="text-primary-400">@ 2024</span> Ian Chong.
+          </InlineLink>
+          <InlineLink href="">Privacy Policy.</InlineLink>
+        </div>
+        <div className="w-[500px]">
+          <Paragraph1>
+            Designed in{" "}
+            <InlineLink href="https://www.figma.com/" underline>
+              Figma.
+            </InlineLink>{" "}
+            Built with{" "}
+            <InlineLink href="https://react.dev/" underline>
+              React
+            </InlineLink>{" "}
+            and{" "}
+            <InlineLink href="https://nextjs.org/" underline>
+              Next.js
             </InlineLink>
-            <InlineLink href="">Privacy Policy.</InlineLink>
-          </div>
-          <div className="w-[500px]">
-            <Paragraph1>
-              Designed in{" "}
-              <InlineLink href="https://www.figma.com/" underline>
-                Figma.
-              </InlineLink>{" "}
-              Built with{" "}
-              <InlineLink href="https://react.dev/" underline>
-                React
-              </InlineLink>{" "}
-              and{" "}
-              <InlineLink href="https://nextjs.org/" underline>
-                Next.js
-              </InlineLink>
-              .
-            </Paragraph1>
-            <Paragraph1>
-              Styled with{" "}
-              <InlineLink href="https://tailwindcss.com/" underline>
-                Tailwind CSS
-              </InlineLink>{" "}
-              and lots of <InlineLink underline>love</InlineLink>.
-            </Paragraph1>
-          </div>
+            .
+          </Paragraph1>
+          <Paragraph1>
+            Styled with{" "}
+            <InlineLink href="https://tailwindcss.com/" underline>
+              Tailwind CSS
+            </InlineLink>{" "}
+            and lots of <InlineLink underline>love</InlineLink>.
+          </Paragraph1>
         </div>
       </div>
     </div>

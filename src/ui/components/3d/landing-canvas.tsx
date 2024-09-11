@@ -27,21 +27,27 @@ const objectPosition = {
   rotationZ: 40,
 };
 
-export default function LandingCanvas3D() {
+interface LandingCanvas3DProps {
+  className?: string;
+}
+
+export default function LandingCanvas3D({ className }: LandingCanvas3DProps) {
   return (
-    <ShaderGradientCanvas importedFiber={{ ...fiber }} pixelDensity={1.4} fov={20}>
-      <ShaderGradient
-        {...meshOptions}
-        {...colorOptions}
-        {...cameraPosition}
-        {...objectPosition}
-        brightness={1.2}
-        grain="on"
-        grainBlending={0.25}
-        type="waterPlane"
-        range="disabled"
-        enableTransition={false}
-      />
-    </ShaderGradientCanvas>
+    <div className={className}>
+      <ShaderGradientCanvas importedFiber={{ ...fiber }} pixelDensity={1.4} fov={20}>
+        <ShaderGradient
+          {...meshOptions}
+          {...colorOptions}
+          {...cameraPosition}
+          {...objectPosition}
+          brightness={1.2}
+          grain="on"
+          grainBlending={0.25}
+          type="waterPlane"
+          range="disabled"
+          enableTransition={false}
+        />
+      </ShaderGradientCanvas>
+    </div>
   );
 }
