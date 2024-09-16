@@ -1,26 +1,26 @@
-import { ComponentProps } from "react";
+import { ComponentProps, forwardRef } from "react";
 import { cn } from "../utils/tailwind";
 
 interface InlineLinkProps extends ComponentProps<"a"> {
   underline?: boolean;
 }
 
-export default function InlineLink({
-  className,
-  underline,
-  children,
-  target,
-  ...props
-}: Readonly<InlineLinkProps>) {
+const InlineLink = forwardRef<HTMLAnchorElement, InlineLinkProps>((props, ref) => {
+  const { className, underline, children, target, ...rest } = props;
   return (
     <a
-      className={cn("font-bold transition-all hover:text-primary-400", className, {
+      ref={ref}
+      className={cn("font-bold transition-colors hover:text-primary-400", className, {
         underline,
       })}
       target={target ?? "_blank"}
-      {...props}
+      {...rest}
     >
       {children}
     </a>
   );
-}
+});
+
+InlineLink.displayName = "InlineLink";
+
+export default InlineLink;

@@ -1,5 +1,6 @@
 import Button from "@/ui/components/button";
 import InlineLink from "@/ui/components/inline-link";
+import Magnetic from "@/ui/components/interaction/magnetic";
 import { Heading1, Heading2, Paragraph2 } from "@/ui/components/typography";
 import { cn } from "@/ui/utils/tailwind";
 import { SiGithub, SiGmail, SiInstagram, SiLinkedin } from "@icons-pack/react-simple-icons";
@@ -45,18 +46,26 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
         {/* Channels */}
         <div className="flex h-full flex-col items-center gap-10">
           <div className="h-full w-[1px] bg-light-100/40"></div>
-          <InlineLink href="/" className="-m-4 p-4">
-            <SiGithub size={20} />
-          </InlineLink>
-          <InlineLink href="/" className="-m-4 p-4">
-            <SiLinkedin size={20} />
-          </InlineLink>
-          <InlineLink href="/" className="-m-4 p-4">
-            <SiInstagram size={20} />
-          </InlineLink>
-          <InlineLink href="/" className="-m-4 p-4">
-            <SiGmail size={20} />
-          </InlineLink>
+          <Magnetic>
+            <InlineLink href="/" className="-m-4 rounded-full p-4">
+              <SiGithub size={20} />
+            </InlineLink>
+          </Magnetic>
+          <Magnetic>
+            <InlineLink href="/" className="-m-4 rounded-full p-4">
+              <SiLinkedin size={20} />
+            </InlineLink>
+          </Magnetic>
+          <Magnetic>
+            <InlineLink href="/" className="-m-4 rounded-full p-4">
+              <SiInstagram size={20} />
+            </InlineLink>
+          </Magnetic>
+          <Magnetic>
+            <InlineLink href="/" className="-m-4 rounded-full p-4">
+              <SiGmail size={20} />
+            </InlineLink>
+          </Magnetic>
           <div className="h-full w-[1px] bg-light-100/40"></div>
         </div>
       </div>

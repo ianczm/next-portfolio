@@ -1,4 +1,4 @@
-import { SmoothScroll } from "@/lib/frontend/smooth-scroll";
+import { Providers } from "@/ui/providers/providers";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import "./index.css";
@@ -15,9 +15,9 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang="en">
-      <SmoothScroll>
+      <Providers>
         <body>{children}</body>
-      </SmoothScroll>
+      </Providers>
     </html>
   );
 }
