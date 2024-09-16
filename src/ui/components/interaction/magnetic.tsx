@@ -2,36 +2,38 @@
 
 import { MouseEventElementWrapper } from "@/ui/utils/interaction/dimensions";
 import { useGSAP } from "@gsap/react";
-import gsap, { Elastic, Power4 } from "gsap";
-import { cloneElement, MouseEventHandler, ReactElement, useRef } from "react";
+import gsap from "gsap";
+import { ComponentProps, MouseEventHandler, ReactElement, useRef } from "react";
+import { Magnetism } from "./constants";
 
-interface MagneticProps {
+interface MagneticProps extends ComponentProps<"div"> {
   children: ReactElement;
   influence?: number;
-  width?: number;
-  height?: number;
 }
 
-export default function Magnetic({ children, influence = 5 }: MagneticProps) {
-  const ref = useRef<HTMLElement>(null);
+/**
+ * Magnetic (currently children elements are not allowed to have event listeners)
+ * @param magneticProps influence default = 5
+ * @returns Children cloned with GSAP-enabled hover effects
+ */
+export default function Magnetic({ children, influence = 5, className }: MagneticProps) {
+  const ref = useRef<HTMLDivElement>(null);
 
   const { contextSafe } = useGSAP({ dependencies: [], scope: ref });
 
-  const onMouseMove: MouseEventHandler<HTMLButtonElement> = contextSafe((e) => {
+  const onMouseMove: MouseEventHandler<HTMLDivElement> = contextSafe((e) => {
     const eventWrapper = MouseEventElementWrapper.create(e.nativeEvent, ref.current!);
     const { x, y } = eventWrapper.getNormalizedDirectionToCursor().multiplyScalar(influence);
-
-    gsap.to(ref.current, {
-      x,
-      y,
-      ease: Power4.easeOut,
-      duration: 0.5,
-    });
+    gsap.to(ref.current, { x, y, ...Magnetism.RATIO.magnetize });
   });
 
-  const onMouseLeave: MouseEventHandler<HTMLButtonElement> = contextSafe((e) => {
-    gsap.to(ref.current, { x: 0, y: 0, ease: Elastic.easeOut, duration: 0.75 });
+  const onMouseLeave: MouseEventHandler<HTMLDivElement> = contextSafe((e) => {
+    gsap.to(ref.current, { x: 0, y: 0, ...Magnetism.RATIO.demagnetize });
   });
 
-  return cloneElement(children, { ref, onMouseMove, onMouseLeave });
+  return (
+    <div ref={ref} onMouseMove={onMouseMove} onMouseLeave={onMouseLeave} className={className}>
+      {children}
+    </div>
+  );
 }
