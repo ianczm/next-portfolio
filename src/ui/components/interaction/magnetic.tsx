@@ -1,6 +1,6 @@
 "use client";
 
-import { MouseEventElementWrapper } from "@/ui/utils/interactions/dimensions";
+import { MouseEventElementWrapper } from "@/ui/utils/interaction/dimensions";
 import { useGSAP } from "@gsap/react";
 import gsap, { Elastic, Power4 } from "gsap";
 import { cloneElement, MouseEventHandler, ReactElement, useRef } from "react";
@@ -12,7 +12,7 @@ interface MagneticProps {
   height?: number;
 }
 
-export default function Magnetic({ children, influence = 10 }: MagneticProps) {
+export default function Magnetic({ children, influence = 5 }: MagneticProps) {
   const ref = useRef<HTMLElement>(null);
 
   const { contextSafe } = useGSAP({ dependencies: [], scope: ref });
@@ -25,12 +25,12 @@ export default function Magnetic({ children, influence = 10 }: MagneticProps) {
       x,
       y,
       ease: Power4.easeOut,
-      duration: 1,
+      duration: 0.5,
     });
   });
 
   const onMouseLeave: MouseEventHandler<HTMLButtonElement> = contextSafe((e) => {
-    gsap.to(ref.current, { x: 0, y: 0, ease: Elastic.easeOut, duration: 1 });
+    gsap.to(ref.current, { x: 0, y: 0, ease: Elastic.easeOut, duration: 0.75 });
   });
 
   return cloneElement(children, { ref, onMouseMove, onMouseLeave });
