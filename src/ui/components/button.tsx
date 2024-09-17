@@ -2,7 +2,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { ComponentProps } from "react";
 
 const buttonStyles = cva(
-  ["rounded-full", "border-2", "px-9", "py-6", "transition-all", "backdrop-blur-3xl"],
+  ["rounded-full", "border-2", "px-9", "py-6", "transition-all", "backdrop-blur-xl"],
   {
     variants: {
       intent: {
