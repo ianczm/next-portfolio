@@ -1,5 +1,6 @@
 import { cva, VariantProps } from "class-variance-authority";
 import { ComponentProps } from "react";
+import { cn } from "../utils/tailwind";
 
 const buttonStyles = cva(
   ["rounded-full", "border-2", "px-9", "py-6", "transition-all", "backdrop-blur-xl"],
@@ -30,7 +31,7 @@ interface ButtonProps extends ComponentProps<"button">, VariantProps<typeof butt
 
 export default function Button({ intent, className, children, ...props }: ButtonProps) {
   return (
-    <button {...props} className={buttonStyles({ intent })}>
+    <button {...props} className={cn(buttonStyles({ intent }), className)}>
       <div className="font-bold">{children}</div>
     </button>
   );

@@ -14,13 +14,16 @@ export default function ScrollSkew({
   children,
   className,
   maxStrength = 1.5,
-  targetVelocity = 4000,
+  targetVelocity = 6000,
 }: ScrollSkewProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useGSAP(
     () => {
-      const transformToSkew = gsap.utils.mapRange(0, targetVelocity, 0, maxStrength);
+      const transformToSkew = gsap.utils.pipe(
+        gsap.utils.clamp(targetVelocity * -1, targetVelocity),
+        gsap.utils.mapRange(0, targetVelocity, 0, maxStrength),
+      );
 
       const skewTo = (skew: number) => {
         gsap.to(ref.current, { skewY: skew, duration: 1, ease: Power3.easeOut });
@@ -38,7 +41,7 @@ export default function ScrollSkew({
         },
       });
     },
-    { dependencies: [], scope: ref },
+    { dependencies: [children], scope: ref },
   );
 
   return (

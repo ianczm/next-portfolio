@@ -7,6 +7,7 @@ type SimpleProject = {
   image: string | StaticImport;
   title: string;
   description: string;
+  projectPath?: string;
 };
 
 export const HOME_PROJECTS: SimpleProject[] = [
@@ -16,6 +17,7 @@ export const HOME_PROJECTS: SimpleProject[] = [
     title: "GuruLab",
     description:
       "Welcoming home page with a cheerful and bright design language for an EduTech startup.",
+    projectPath: "gurulab",
   },
   {
     id: 2,

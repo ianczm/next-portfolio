@@ -1,3 +1,5 @@
+import LandingCanvas3D from "@/ui/components/3d/landing-canvas";
+import ScrollSkew from "@/ui/components/interaction/scroll-skew";
 import { Providers } from "@/ui/providers/providers";
 import Footer from "@/ui/sections/footer";
 import NavBar from "@/ui/sections/navbar";
@@ -20,8 +22,13 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
       <Providers>
         <body>
           <NavBar className="fixed" />
-          <main className="relative">{children}</main>
-          <Footer />
+          <main className="relative">
+            <LandingCanvas3D className="fixed -z-50 h-screen w-screen" />
+            <ScrollSkew>
+              {children}
+              <Footer />
+            </ScrollSkew>
+          </main>
         </body>
       </Providers>
     </html>

@@ -49,6 +49,11 @@ html {
 body {
   font-size: 1.25rem;
   box-sizing: border-box;
+
+  p {
+    orphans: 3;
+    widows: 3;
+  }
 }
 
 @layer utilities {
