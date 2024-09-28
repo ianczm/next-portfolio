@@ -19,13 +19,10 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
             Hey, I'm Ian <span className="text-light-100">👋</span>
           </Heading2>
           <Heading1>
-            I love turning <span className="text-transparent">web ideas</span> into{" "}
-            <span className="text-transparent">living and breathing spaces.</span>
+            I'm a <span className="text-transparent">software engineer</span> with an interest in{" "}
+            <span className="text-transparent">anything web.</span>
           </Heading1>
           <div>
-            <Paragraph2>
-              I'm a fullstack web developer. Freelanced for frontend projects.
-            </Paragraph2>
             <Paragraph2>
               Currently building{" "}
               <InlineLink href="https://spring.io/projects/spring-boot" underline>
