@@ -10,10 +10,10 @@ import ReportSelectImg from "@/assets/images/projects/gurulab/report-select.png"
 import TutorWireframeImg from "@/assets/images/projects/gurulab/tutor-wireframe.png";
 import TypesettingImg from "@/assets/images/projects/gurulab/typesetting.png";
 import WireframingImg from "@/assets/images/projects/gurulab/wireframing.png";
-import { ArticleImage } from "@/ui/components/articles/article-image";
 import { ArticleParagraph } from "@/ui/components/articles/article-paragraph";
 import Button from "@/ui/components/button";
 import Magnetic from "@/ui/components/interaction/magnetic";
+import { ArticleImageParallax } from "@/ui/components/interaction/parallax";
 import { GradientText, Heading1, Heading2 } from "@/ui/components/typography";
 import Image from "next/image";
 
@@ -79,9 +79,9 @@ export default function GuruLabProjectPage() {
             </Magnetic>
           </div>
         </section>
-        <ArticleImage src={Version2Img} alt="GuruLab v1" imageClassname="aspect-[1.8]">
+        <ArticleImageParallax src={Version2Img} alt="GuruLab v1" imageClassname="aspect-[1.8]">
           The official site's new look
-        </ArticleImage>
+        </ArticleImageParallax>
         <section>
           <div className="mb-10 flex w-1/2 flex-col gap-10">
             <Heading1 className="text-balance">
@@ -109,9 +109,9 @@ export default function GuruLabProjectPage() {
             </ArticleParagraph>
           </div>
         </section>
-        <ArticleImage src={Version1Img} alt="GuruLab v2" imageClassname="aspect-[1.8]">
+        <ArticleImageParallax src={Version1Img} alt="GuruLab v2" imageClassname="aspect-[1.8]">
           The first version of the home page
-        </ArticleImage>
+        </ArticleImageParallax>
         <section>
           <div className="mb-10 flex w-1/2 flex-col gap-10">
             <Heading1 className="text-balance">
@@ -152,24 +152,28 @@ export default function GuruLabProjectPage() {
         </section>
         <section className="grid grid-cols-2 gap-x-32">
           <div className="mt-32 flex flex-col gap-16">
-            <ArticleImage src={InputsImg} alt="Inputs" imageClassname="aspect-[1.65]">
+            <ArticleImageParallax src={InputsImg} alt="Inputs" imageClassname="aspect-[1.65]">
               Input error states
-            </ArticleImage>
-            <ArticleImage src={FormsImg} alt="Forms" imageClassname="aspect-[0.825]">
+            </ArticleImageParallax>
+            <ArticleImageParallax src={FormsImg} alt="Forms" imageClassname="aspect-[0.825]">
               Forms are more uniform
-            </ArticleImage>
+            </ArticleImageParallax>
           </div>
           <div className="flex flex-col gap-16">
-            <ArticleImage
+            <ArticleImageParallax
               src={CardTypesImg}
               alt="Cards and Component Cards"
               imageClassname="aspect-[0.825]"
             >
               Usage of cards and compound variants
-            </ArticleImage>
-            <ArticleImage src={TypesettingImg} alt="Typesetting" imageClassname="aspect-[1.65]">
+            </ArticleImageParallax>
+            <ArticleImageParallax
+              src={TypesettingImg}
+              alt="Typesetting"
+              imageClassname="aspect-[1.65]"
+            >
               Typesetting reference
-            </ArticleImage>
+            </ArticleImageParallax>
           </div>
         </section>
         <section>
@@ -204,14 +208,14 @@ export default function GuruLabProjectPage() {
             </ArticleParagraph>
           </div>
         </section>
-        <ArticleImage
+        <ArticleImageParallax
           src={WireframingImg}
           alt="Figma Wireframing"
           imageClassname="aspect-[1.8]"
           useGradient={false}
         >
           Making use of Figma prototypes and component variants for the redemption catalogue
-        </ArticleImage>
+        </ArticleImageParallax>
         <section>
           <div className="mb-10 flex w-1/2 flex-col gap-10">
             <Heading1 className="text-balance">
@@ -245,21 +249,21 @@ export default function GuruLabProjectPage() {
           </div>
         </section>
         <section className="grid grid-cols-2 gap-x-32">
-          <ArticleImage
+          <ArticleImageParallax
             src={PersonalizationImg}
             alt="Personalized Report Sections"
             imageClassname="aspect-[0.825]"
             useGradient={false}
           >
             The personalized learning report
-          </ArticleImage>
-          <ArticleImage
+          </ArticleImageParallax>
+          <ArticleImageParallax
             src={ReportSelectImg}
             alt="Report Selection"
             imageClassname="mt-32 aspect-[0.825]"
           >
             Parents can select which semester report to view
-          </ArticleImage>
+          </ArticleImageParallax>
         </section>
         <section>
           <div className="mb-10 flex w-1/2 flex-col gap-10">
@@ -300,14 +304,14 @@ export default function GuruLabProjectPage() {
             </ArticleParagraph>
           </div>
         </section>
-        <ArticleImage
+        <ArticleImageParallax
           src={TutorWireframeImg}
           alt="Wireframes Comparison"
           imageClassname="aspect-[1.8]"
         >
           A wireframe for a chat interface I proposed (back) versus the interface tutors actually
           needed (front)
-        </ArticleImage>
+        </ArticleImageParallax>
       </article>
       <TestimonialsSection />
     </>
