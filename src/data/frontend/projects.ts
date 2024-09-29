@@ -30,7 +30,7 @@ export const HOME_PROJECTS: SimpleProject[] = [
     id: 3,
     image: ShotdeskJourneyOfLife,
     title: "This Portfolio",
-    description: "A milestone in establishing a personal brand and consolidating my skills.",
+    description: "A personal project for me to tinker around and learn.",
   },
   {
     id: 4,

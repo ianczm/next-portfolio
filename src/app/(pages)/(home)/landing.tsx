@@ -23,7 +23,7 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
           </Heading2>
           <Heading1>
             I'm a <span className="text-transparent">software engineer</span> who loves creating for{" "}
-            <span className="text-transparent">the web.</span>
+            <span className="text-transparent">the web</span>
           </Heading1>
           <div>
             <Paragraph2>
@@ -35,7 +35,6 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
               <InlineLink href="https://www.hilti.com/" underline isExternal>
                 Hilti
               </InlineLink>
-              .
             </Paragraph2>
           </div>
           <div className="mt-4 flex gap-4">

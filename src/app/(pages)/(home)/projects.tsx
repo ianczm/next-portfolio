@@ -19,7 +19,7 @@ export function ProjectsSection({ className, ...props }: ComponentProps<"div">) 
       <div className="flex max-w-[700px] flex-col gap-10">
         <Heading2>Featured Projects</Heading2>
         <Heading1>
-          I've worked on some <br /> pretty <span className="text-transparent">fun projects.</span>
+          I've worked on some <br /> pretty <span className="text-transparent">fun projects</span>
         </Heading1>
       </div>
       {/* Projects container */}

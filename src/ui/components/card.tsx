@@ -19,7 +19,7 @@ export function Card({ src, title, children, className, href }: Readonly<CardPro
   return (
     <Link className={cn("relative", className)} href={href ?? "/"}>
       <Image src={src} alt={title} className="aspect-[0.8] w-full object-cover" />
-      <div className="absolute bottom-0 flex items-end gap-10 p-16">
+      <div className="absolute bottom-0 flex h-full items-end gap-10 bg-dark-800/0 p-16 transition-colors hover:bg-dark-800/20">
         <div>
           <Heading3 className="mb-5">{title}</Heading3>
           <Paragraph2 className="text-balance">{children}</Paragraph2>

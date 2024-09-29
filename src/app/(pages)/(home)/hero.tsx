@@ -15,7 +15,7 @@ export function HeroBanner({ className, ...props }: ComponentProps<"div">) {
       <div className="absolute bottom-20 left-0 w-full">
         <div className="mx-auto max-w-screen-2xl p-20">
           <Heading1 noGradient>
-            Crafting an experience <br /> means the careful blend <br /> of feel and function.
+            Crafting an experience <br /> means the careful blend <br /> of feel and function
           </Heading1>
         </div>
       </div>
