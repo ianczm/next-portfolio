@@ -22,8 +22,8 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
             Hey, I'm Ian <span className="text-light-100">👋</span>
           </Heading2>
           <Heading1>
-            I'm a <span className="text-transparent">software engineer</span> with an interest in{" "}
-            <span className="text-transparent">anything web.</span>
+            I'm a <span className="text-transparent">software engineer</span> with <br /> an
+            interest in <span className="text-transparent">anything web.</span>
           </Heading1>
           <div>
             <Paragraph2>

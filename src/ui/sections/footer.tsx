@@ -10,7 +10,7 @@ export default function Footer({ className, ...props }: ComponentProps<"div">) {
     <div className={cn("mx-auto flex max-w-screen-2xl gap-32 px-20 pb-20 pt-40")} {...props}>
       {/* Top */}
       <div className="flex flex-col justify-between gap-32">
-        <div className="flex max-w-[810px] flex-col gap-10">
+        <div className="flex flex-col gap-10">
           <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
             Get In Touch
           </h2>
@@ -23,12 +23,11 @@ export default function Footer({ className, ...props }: ComponentProps<"div">) {
           <InlineLink href="">
             <span className="text-primary-400">@ 2024</span> Ian Chong.
           </InlineLink>
-          <InlineLink href="">Privacy Policy.</InlineLink>
         </div>
       </div>
       {/* Bottom */}
-      <div className="flex flex-col justify-between gap-32">
-        <div className="flex w-[500px] gap-10">
+      <div className="flex max-w-[500px] flex-shrink-[1.5] flex-col justify-between gap-32">
+        <div className="flex gap-20">
           <div className="flex w-full flex-col gap-10">
             <h2 className="text-gradient font-bold uppercase tracking-widest text-transparent">
               Explore
@@ -65,7 +64,7 @@ export default function Footer({ className, ...props }: ComponentProps<"div">) {
             </ul>
           </div>
         </div>
-        <div className="w-[500px]">
+        <div className="w-full">
           <Paragraph1>
             Designed in{" "}
             <InlineLink href="https://www.figma.com/" underline>
@@ -79,10 +78,7 @@ export default function Footer({ className, ...props }: ComponentProps<"div">) {
             <InlineLink href="https://nextjs.org/" underline>
               Next.js
             </InlineLink>
-            .
-          </Paragraph1>
-          <Paragraph1>
-            Styled with{" "}
+            . Styled with{" "}
             <InlineLink href="https://tailwindcss.com/" underline>
               Tailwind CSS
             </InlineLink>{" "}
