@@ -1,3 +1,4 @@
+import { MenuIcon } from "lucide-react";
 import { ComponentProps } from "react";
 import Button from "../components/button";
 import InlineLink from "../components/inline-link";
@@ -8,11 +9,12 @@ import { cn } from "../utils/tailwind";
 export default function NavBar({ className, ...props }: ComponentProps<"div">) {
   return (
     <nav className={cn("absolute left-0 top-0 z-50 w-full", className)} {...props}>
-      <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-20 py-10">
+      <div className="mx-auto flex max-w-screen-2xl items-center justify-between p-8 md:px-20 md:py-10">
         <InlineLink href="/" className="-m-4 p-4">
           <IanczmLogo />
         </InlineLink>
-        <div className="flex items-center gap-10 lg:gap-16 xl:gap-20">
+        {/* Desktop */}
+        <div className="hidden items-center gap-10 md:flex lg:gap-16 xl:gap-20">
           <NavLink href="/" className="-m-4 p-4">
             Home
           </NavLink>
@@ -24,6 +26,10 @@ export default function NavBar({ className, ...props }: ComponentProps<"div">) {
           </NavLink>
           <Button intent="primary">Contact</Button>
         </div>
+        {/* Mobile */}
+        <Button intent="primary" className="block aspect-square p-5 md:hidden">
+          <MenuIcon />
+        </Button>
       </div>
     </nav>
   );

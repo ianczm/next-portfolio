@@ -12,7 +12,10 @@ export function ProjectsSection({ className, ...props }: ComponentProps<"div">) 
 
   return (
     <div
-      className={cn("mx-auto flex max-w-screen-2xl flex-col gap-16 px-20 py-40", className)}
+      className={cn(
+        "mx-auto flex max-w-screen-2xl flex-col gap-16 px-8 py-16 md:px-20 md:py-40",
+        className,
+      )}
       {...props}
     >
       {/* Header */}

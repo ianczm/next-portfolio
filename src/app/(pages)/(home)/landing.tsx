@@ -10,7 +10,7 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
   return (
     <div
       className={cn(
-        "mx-auto my-auto flex h-[calc(70vh+15vw)] min-h-fit max-w-screen-2xl flex-col justify-center px-20",
+        "mx-auto my-auto flex h-[calc(100vh-5vw)] min-h-fit max-w-screen-2xl flex-col justify-center px-8 md:px-20",
         className,
       )}
       {...props}
@@ -43,7 +43,7 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
           </div>
         </div>
         {/* Channels */}
-        <div className="flex h-full flex-col items-center gap-10">
+        <div className="hidden h-full flex-col items-center gap-10 md:flex">
           <div className="h-full w-[1px] bg-light-100/40"></div>
           <Magnetic className="-m-4 rounded-full">
             <InlineLink href="https://github.com/ianczm" className="block p-4" isExternal>
