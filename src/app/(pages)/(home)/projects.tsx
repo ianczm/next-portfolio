@@ -28,7 +28,8 @@ export function ProjectsSection({ className, ...props }: ComponentProps<"div">) 
                 key={project.id}
                 src={project.image}
                 title={project.title}
-                className="h-[875px] w-[700px] shadow-xl"
+                href={project.href}
+                className="shadow-xl"
               >
                 {project.description}
               </Card>

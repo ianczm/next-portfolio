@@ -27,13 +27,14 @@ export default function ScrollSkew({
 
       const skewTo = (skew: number) => {
         gsap.to(ref.current, { skewY: skew, duration: 1, ease: Power3.easeOut });
+        console.log({ skewing: skew });
       };
 
       ScrollTrigger.create({
         trigger: ref.current,
         onUpdate: (scrollTrigger) => {
           const skew = transformToSkew(scrollTrigger.getVelocity());
-          if (Math.abs(skew) < 0.1) {
+          if (Math.abs(skew) < 0.1 || Math.abs(skew) > 1.4) {
             skewTo(0);
           } else {
             skewTo(skew);
@@ -41,7 +42,7 @@ export default function ScrollSkew({
         },
       });
     },
-    { dependencies: [children], scope: ref },
+    { dependencies: [children, ref], scope: ref, revertOnUpdate: true },
   );
 
   return (
