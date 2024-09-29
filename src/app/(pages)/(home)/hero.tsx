@@ -7,10 +7,14 @@ import { ComponentProps } from "react";
 export function HeroBanner({ className, ...props }: ComponentProps<"div">) {
   return (
     <div className={cn("relative", className)} {...props}>
-      <Image src={HeroGurulab} alt="Gurulab" className="h-auto w-full" />
-      <div className="absolute bottom-0 p-60">
-        <div className="flex max-w-[700px] flex-col gap-10">
-          <Heading1 noGradient>
+      <Image
+        src={HeroGurulab}
+        alt="Gurulab"
+        className="h-auto min-h-[500px] w-full object-cover object-bottom"
+      />
+      <div className="absolute bottom-20 left-0 w-full">
+        <div className="mx-auto max-w-screen-2xl p-20">
+          <Heading1 className="max-w-[700px]" noGradient>
             Crafting an experience means the careful blend of feel and function.
           </Heading1>
         </div>

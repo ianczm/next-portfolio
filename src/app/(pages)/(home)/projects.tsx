@@ -11,7 +11,10 @@ export function ProjectsSection({ className, ...props }: ComponentProps<"div">) 
   ];
 
   return (
-    <div className={cn("flex flex-col gap-16 p-60", className)} {...props}>
+    <div
+      className={cn("mx-auto flex max-w-screen-2xl flex-col gap-16 px-20 py-40", className)}
+      {...props}
+    >
       {/* Header */}
       <div className="flex max-w-[700px] flex-col gap-10">
         <Heading2>Featured Projects</Heading2>

@@ -21,7 +21,7 @@ export default function GuruLabProjectPage() {
   return (
     <>
       <Image src={HeroImg} alt="GuruLab Hero Image" className="block h-[600px] object-cover" />
-      <article className="flex flex-col gap-32 p-60">
+      <article className="mx-auto flex max-w-screen-2xl flex-col gap-32 px-20 py-40">
         <section>
           <div className="mb-10 flex w-1/2 flex-col gap-10">
             <Heading2>Project Diary</Heading2>

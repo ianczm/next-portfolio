@@ -9,7 +9,10 @@ import { ComponentProps } from "react";
 export function LandingSection({ className, ...props }: ComponentProps<"div">) {
   return (
     <div
-      className={cn("my-auto flex h-screen flex-col justify-center px-60", className)}
+      className={cn(
+        "mx-auto my-auto flex h-[calc(100vh-2rem)] min-h-fit max-w-screen-2xl flex-col justify-center px-20",
+        className,
+      )}
       {...props}
     >
       <div className="mt-20 flex items-center justify-between">

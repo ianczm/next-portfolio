@@ -7,7 +7,7 @@ import { cn } from "../utils/tailwind";
 
 export default function Footer({ className, ...props }: ComponentProps<"div">) {
   return (
-    <div className={cn("flex gap-32 p-60 pb-40")} {...props}>
+    <div className={cn("mx-auto flex max-w-screen-2xl gap-32 px-20 pb-20 pt-40")} {...props}>
       {/* Top */}
       <div className="flex flex-col justify-between gap-32">
         <div className="flex max-w-[810px] flex-col gap-10">

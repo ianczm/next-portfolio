@@ -14,7 +14,7 @@ import { ComponentProps } from "react";
 export function TestimonialsSection({ className, ...props }: ComponentProps<"div">) {
   return (
     <div className={cn("bg-dark-400", className)} {...props}>
-      <div className="flex flex-col gap-32 p-60">
+      <div className="mx-auto flex max-w-screen-2xl flex-col gap-32 px-20 py-40">
         <div className="flex flex-col gap-10">
           <Heading2>What Clients Said</Heading2>
           <hr className="border-light-100/40" />
