@@ -30,9 +30,9 @@ export function ArticleImageParallax({
     () => {
       gsap.fromTo(
         subjectRef.current,
-        { translateY: parallaxStrength * -1 },
+        { yPercent: -55 },
         {
-          translateY: parallaxStrength,
+          yPercent: -45,
           ease: "none",
           scrollTrigger: {
             trigger: containerRef.current,
@@ -60,7 +60,7 @@ export function ArticleImageParallax({
             "bg-gradient-to-tr from-[#F57255] to-[#FFA339]": useGradient,
           })}
         >
-          <Image src={src} alt={alt} className="h-full min-h-full w-full min-w-full" />
+          <Image src={src} alt={alt} className="block h-full min-h-full w-full min-w-full" />
         </div>
       </div>
       <span className="font-bold text-light-100/50">{children}</span>
