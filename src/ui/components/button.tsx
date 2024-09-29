@@ -3,7 +3,15 @@ import { ComponentProps } from "react";
 import { cn } from "../utils/tailwind";
 
 const buttonStyles = cva(
-  ["rounded-full", "border-2", "px-9", "py-6", "transition-all", "backdrop-blur-xl"],
+  [
+    "rounded-full",
+    "border-2",
+    "px-9",
+    "py-6",
+    "transition-all",
+    "backdrop-blur-xl",
+    "text-lg xl:text-xl",
+  ],
   {
     variants: {
       intent: {

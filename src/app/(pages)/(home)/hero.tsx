@@ -10,7 +10,7 @@ export function HeroBanner({ className, ...props }: ComponentProps<"div">) {
       <Image
         src={HeroGurulab}
         alt="Gurulab"
-        className="h-auto min-h-[800px] w-full object-cover object-[25%_25%]"
+        className="h-auto min-h-[750px] w-full object-cover object-[20%_20%]"
       />
       <div className="absolute bottom-20 left-0 w-full">
         <div className="mx-auto max-w-screen-2xl p-20">

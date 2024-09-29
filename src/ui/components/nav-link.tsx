@@ -16,7 +16,11 @@ export default function NavLink({ href, className, children }: Readonly<NavLinkP
   return (
     <Link
       href={href}
-      className={cn("transition-all hover:text-primary-400", { "font-bold": isActive }, className)}
+      className={cn(
+        "text-lg transition-all hover:text-primary-400 xl:text-xl",
+        { "font-bold": isActive },
+        className,
+      )}
     >
       {children}
     </Link>

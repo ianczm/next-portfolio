@@ -12,7 +12,7 @@ export default function NavBar({ className, ...props }: ComponentProps<"div">) {
         <InlineLink href="/" className="-m-4 p-4">
           <IanczmLogo />
         </InlineLink>
-        <div className="flex items-center gap-16 xl:gap-20">
+        <div className="flex items-center gap-10 lg:gap-16 xl:gap-20">
           <NavLink href="/" className="-m-4 p-4">
             Home
           </NavLink>

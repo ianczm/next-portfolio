@@ -10,20 +10,20 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
   return (
     <div
       className={cn(
-        "mx-auto my-auto flex h-[calc(65vh+15vw+2rem)] min-h-fit max-w-screen-2xl flex-col justify-center px-20",
+        "mx-auto my-auto flex h-[calc(70vh+15vw)] min-h-fit max-w-screen-2xl flex-col justify-center px-20",
         className,
       )}
       {...props}
     >
-      <div className="mt-20 flex items-center justify-between">
+      <div className="mt-20 flex items-center justify-between gap-32">
         {/* Main landing */}
         <div className="flex max-w-[810px] flex-col gap-10">
           <Heading2>
             Hey, I'm Ian <span className="text-light-100">👋</span>
           </Heading2>
           <Heading1>
-            I'm a <span className="text-transparent">software engineer</span> with <br /> an
-            interest in <span className="text-transparent">anything web.</span>
+            I'm a <span className="text-transparent">software engineer</span> who loves creating for{" "}
+            <span className="text-transparent">the web.</span>
           </Heading1>
           <div>
             <Paragraph2>

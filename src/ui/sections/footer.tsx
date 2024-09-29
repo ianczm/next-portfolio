@@ -1,6 +1,5 @@
 import { ComponentProps } from "react";
 import InlineLink from "../components/inline-link";
-import NavLink from "../components/nav-link";
 import { Heading1 } from "../components/typography/heading-1";
 import { Heading2 } from "../components/typography/heading-2";
 import { Paragraph1 } from "../components/typography/paragraph";
@@ -8,7 +7,10 @@ import { cn } from "../utils/tailwind";
 
 export default function Footer({ className, ...props }: ComponentProps<"div">) {
   return (
-    <div className={cn("mx-auto flex max-w-screen-2xl gap-32 px-20 pb-20 pt-40")} {...props}>
+    <div
+      className={cn("mx-auto flex max-w-screen-2xl gap-16 px-20 pb-20 pt-40 xl:gap-32")}
+      {...props}
+    >
       {/* Top */}
       <div className="flex flex-col justify-between gap-32">
         <div className="flex flex-col gap-10">
@@ -33,13 +35,13 @@ export default function Footer({ className, ...props }: ComponentProps<"div">) {
             <Heading2>Explore</Heading2>
             <ul className="flex flex-col gap-3 text-xl font-bold xl:gap-5 xl:text-2xl">
               <li>
-                <NavLink href="/">Home</NavLink>
+                <InlineLink href="/">Home</InlineLink>
               </li>
               <li>
-                <NavLink href="/about">About</NavLink>
+                <InlineLink href="/about">About</InlineLink>
               </li>
               <li>
-                <NavLink href="/about">Projects</NavLink>
+                <InlineLink href="/about">Projects</InlineLink>
               </li>
             </ul>
           </div>
