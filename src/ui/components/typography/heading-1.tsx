@@ -9,7 +9,7 @@ export function Heading1({ children, noGradient, className, ...props }: Heading1
   return (
     <h1
       className={cn(
-        "text-6xl font-bold leading-tight tracking-tight",
+        "text-5xl font-bold leading-tight tracking-tight xl:text-6xl",
         { "text-gradient": !noGradient },
         className,
       )}
