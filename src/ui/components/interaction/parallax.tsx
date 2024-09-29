@@ -51,7 +51,12 @@ export function ArticleImageParallax({
       <div ref={containerRef} className={cn("relative overflow-hidden", imageClassname)}>
         <div
           ref={subjectRef}
-          className={cn("absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2", {
+          style={{
+            transform: "translate(-50%, -50%)",
+            top: "50%",
+            left: "50%",
+          }}
+          className={cn("absolute w-full", {
             "bg-gradient-to-tr from-[#F57255] to-[#FFA339]": useGradient,
           })}
         >

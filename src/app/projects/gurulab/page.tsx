@@ -79,9 +79,11 @@ export default function GuruLabProjectPage() {
             </Magnetic>
           </div>
         </section>
-        <ArticleImageParallax src={Version2Img} alt="GuruLab v1" imageClassname="aspect-[1.8]">
-          The official site's new look
-        </ArticleImageParallax>
+        <section>
+          <ArticleImageParallax src={Version2Img} alt="GuruLab v1" imageClassname="aspect-[1.8]">
+            The official site's new look
+          </ArticleImageParallax>
+        </section>
         <section>
           <div className="mb-10 flex w-1/2 flex-col gap-10">
             <Heading1 className="text-balance">
@@ -109,9 +111,11 @@ export default function GuruLabProjectPage() {
             </ArticleParagraph>
           </div>
         </section>
-        <ArticleImageParallax src={Version1Img} alt="GuruLab v2" imageClassname="aspect-[1.8]">
-          The first version of the home page
-        </ArticleImageParallax>
+        <section>
+          <ArticleImageParallax src={Version1Img} alt="GuruLab v2" imageClassname="aspect-[1.8]">
+            The first version of the home page
+          </ArticleImageParallax>
+        </section>
         <section>
           <div className="mb-10 flex w-1/2 flex-col gap-10">
             <Heading1 className="text-balance">
@@ -208,14 +212,16 @@ export default function GuruLabProjectPage() {
             </ArticleParagraph>
           </div>
         </section>
-        <ArticleImageParallax
-          src={WireframingImg}
-          alt="Figma Wireframing"
-          imageClassname="aspect-[1.8]"
-          useGradient={false}
-        >
-          Making use of Figma prototypes and component variants for the redemption catalogue
-        </ArticleImageParallax>
+        <section>
+          <ArticleImageParallax
+            src={WireframingImg}
+            alt="Figma Wireframing"
+            imageClassname="aspect-[1.8]"
+            useGradient={false}
+          >
+            Making use of Figma prototypes and component variants for the redemption catalogue
+          </ArticleImageParallax>
+        </section>
         <section>
           <div className="mb-10 flex w-1/2 flex-col gap-10">
             <Heading1 className="text-balance">
@@ -304,14 +310,16 @@ export default function GuruLabProjectPage() {
             </ArticleParagraph>
           </div>
         </section>
-        <ArticleImageParallax
-          src={TutorWireframeImg}
-          alt="Wireframes Comparison"
-          imageClassname="aspect-[1.8]"
-        >
-          A wireframe for a chat interface I proposed (back) versus the interface tutors actually
-          needed (front)
-        </ArticleImageParallax>
+        <section>
+          <ArticleImageParallax
+            src={TutorWireframeImg}
+            alt="Wireframes Comparison"
+            imageClassname="aspect-[1.8]"
+          >
+            A wireframe for a chat interface I proposed (back) versus the interface tutors actually
+            needed (front)
+          </ArticleImageParallax>
+        </section>
       </article>
       <TestimonialsSection />
     </>

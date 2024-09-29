@@ -4,7 +4,7 @@ import { SmoothScroll } from "@/lib/frontend/smooth-scroll";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ReactNode } from "react";
+import { ReactNode, Suspense } from "react";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -13,5 +13,9 @@ type ProvidersProps = {
 };
 
 export function Providers({ children }: Readonly<ProvidersProps>) {
-  return <SmoothScroll>{children}</SmoothScroll>;
+  return (
+    <Suspense>
+      <SmoothScroll>{children}</SmoothScroll>
+    </Suspense>
+  );
 }
