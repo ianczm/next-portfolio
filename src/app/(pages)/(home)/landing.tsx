@@ -10,7 +10,7 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
   return (
     <div
       className={cn(
-        "mx-auto my-auto flex h-[calc(100vh-2rem)] min-h-fit max-w-screen-2xl flex-col justify-center px-20",
+        "mx-auto my-auto flex h-[calc(65vh+15vw+2rem)] min-h-fit max-w-screen-2xl flex-col justify-center px-20",
         className,
       )}
       {...props}

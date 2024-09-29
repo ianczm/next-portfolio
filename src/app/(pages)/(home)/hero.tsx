@@ -10,11 +10,11 @@ export function HeroBanner({ className, ...props }: ComponentProps<"div">) {
       <Image
         src={HeroGurulab}
         alt="Gurulab"
-        className="h-auto min-h-[500px] w-full object-cover object-bottom"
+        className="h-auto min-h-[800px] w-full object-cover object-[25%_25%]"
       />
       <div className="absolute bottom-20 left-0 w-full">
         <div className="mx-auto max-w-screen-2xl p-20">
-          <Heading1 className="max-w-[700px]" noGradient>
+          <Heading1 noGradient>
             Crafting an experience <br /> means the careful blend <br /> of feel and function.
           </Heading1>
         </div>
