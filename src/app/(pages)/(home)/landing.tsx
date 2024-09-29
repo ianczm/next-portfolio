@@ -25,11 +25,11 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
           <div>
             <Paragraph2>
               Currently building{" "}
-              <InlineLink href="https://spring.io/projects/spring-boot" underline>
+              <InlineLink href="https://spring.io/projects/spring-boot" underline isExternal>
                 Java Spring Boot
               </InlineLink>{" "}
               cloud services at{" "}
-              <InlineLink href="https://www.hilti.com/" underline>
+              <InlineLink href="https://www.hilti.com/" underline isExternal>
                 Hilti
               </InlineLink>
               .
@@ -44,22 +44,22 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
         <div className="flex h-full flex-col items-center gap-10">
           <div className="h-full w-[1px] bg-light-100/40"></div>
           <Magnetic className="-m-4 rounded-full">
-            <InlineLink href="/" className="block p-4">
+            <InlineLink href="https://github.com/ianczm" className="block p-4" isExternal>
               <SiGithub size={20} />
             </InlineLink>
           </Magnetic>
           <Magnetic className="-m-4 rounded-full">
-            <InlineLink href="/" className="block p-4">
+            <InlineLink href="https://www.linkedin.com/in/ianczm/" className="block p-4" isExternal>
               <SiLinkedin size={20} />
             </InlineLink>
           </Magnetic>
           <Magnetic className="-m-4 rounded-full">
-            <InlineLink href="/" className="block p-4">
+            <InlineLink href="https://www.instagram.com/ianczm/" className="block p-4" isExternal>
               <SiInstagram size={20} />
             </InlineLink>
           </Magnetic>
           <Magnetic className="-m-4 rounded-full">
-            <InlineLink href="/" className="block p-4">
+            <InlineLink href="mailto:ianczm@live.co.uk" className="block p-4">
               <SiGmail size={20} />
             </InlineLink>
           </Magnetic>
