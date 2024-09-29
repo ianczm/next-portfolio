@@ -30,9 +30,10 @@ export function ArticleImageParallax({
     () => {
       gsap.fromTo(
         subjectRef.current,
-        { yPercent: -55 },
+        { yPercent: -55, xPercent: -50 },
         {
           yPercent: -45,
+          xPercent: -50,
           ease: "none",
           scrollTrigger: {
             trigger: containerRef.current,
@@ -52,7 +53,6 @@ export function ArticleImageParallax({
         <div
           ref={subjectRef}
           style={{
-            transform: "translate(-50%, -50%)",
             top: "50%",
             left: "50%",
           }}
