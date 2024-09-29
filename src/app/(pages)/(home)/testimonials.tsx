@@ -20,7 +20,7 @@ export function TestimonialsSection({ className, ...props }: ComponentProps<"div
           <hr className="border-light-100/40" />
         </div>
         {HOME_TESTIMONIALS.map((testimonial) => (
-          <div key={testimonial.id} className="grid grid-cols-[1fr_2fr] gap-10">
+          <div key={testimonial.id} className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_2fr]">
             <div>
               <Heading3>{testimonial.project}</Heading3>
               <GradientText as={Paragraph2} className="font-bold">

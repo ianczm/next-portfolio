@@ -80,8 +80,8 @@ export default function Footer({ className, ...props }: ComponentProps<"div">) {
             . Styled with{" "}
             <InlineLink href="https://tailwindcss.com/" underline>
               Tailwind CSS
-            </InlineLink>{" "}
-            and lots of <InlineLink underline>love</InlineLink>.
+            </InlineLink>
+            .
           </Paragraph1>
         </div>
       </div>

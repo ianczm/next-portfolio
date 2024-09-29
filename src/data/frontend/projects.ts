@@ -15,27 +15,25 @@ export const HOME_PROJECTS: SimpleProject[] = [
     id: 1,
     image: ShotdeskGurulab,
     title: "GuruLab",
-    description:
-      "Welcoming home page with a cheerful and bright design language for an EduTech startup.",
+    description: "Bright and cheerful home page revamp for an EduTech startup",
     href: "/projects/gurulab",
   },
   {
     id: 2,
     image: ShotdeskJourneyOfLife,
     title: "Journey of Life",
-    description:
-      "Multiplayer game for event participants to experience the thrill of financial decision-making.",
+    description: "Multiplayer game about financial decision-making for an event",
   },
   {
     id: 3,
     image: ShotdeskJourneyOfLife,
     title: "This Portfolio",
-    description: "A personal project for me to tinker around and learn.",
+    description: "Personal project for me to try out new things",
   },
   {
     id: 4,
     image: ShotdeskGurulab,
     title: "More Projects",
-    description: "View other exciting ideas that I've been working on.",
+    description: "View other exciting ideas that I've been working on",
   },
 ];

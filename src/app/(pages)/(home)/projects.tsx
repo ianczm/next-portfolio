@@ -23,9 +23,9 @@ export function ProjectsSection({ className, ...props }: ComponentProps<"div">) 
         </Heading1>
       </div>
       {/* Projects container */}
-      <div className="flex gap-10">
+      <div className="flex flex-col gap-10 lg:flex-row">
         {projectColumns.map((column, index) => (
-          <div key={index} className={cn(`flex flex-col gap-10`, { "pt-36": index === 0 })}>
+          <div key={index} className={cn(`flex flex-col gap-10`, { "lg:pt-36": index === 0 })}>
             {column.map((project) => (
               <Card
                 key={project.id}
