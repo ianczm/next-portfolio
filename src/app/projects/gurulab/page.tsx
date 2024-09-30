@@ -13,16 +13,16 @@ import WireframingImg from "@/assets/images/projects/gurulab/wireframing.png";
 import ArticleHeaderWrapper from "@/ui/components/articles/article-header-wrapper";
 import { ArticleParagraph } from "@/ui/components/articles/article-paragraph";
 import ArticleParagraphWrapper from "@/ui/components/articles/article-paragraph-wrapper";
-import Button from "@/ui/components/button";
+import ButtonLink from "@/ui/components/button-link";
 import Magnetic from "@/ui/components/interaction/magnetic";
 import { ArticleImageParallax } from "@/ui/components/interaction/parallax";
-import { GradientText, Heading1, Heading2 } from "@/ui/components/typography";
+import { Heading1, Heading2 } from "@/ui/components/typography";
 import Image from "next/image";
 
 export default function GuruLabProjectPage() {
   return (
     <>
-      <Image src={HeroImg} alt="GuruLab Hero Image" className="block h-[600px] object-cover" />
+      <Image src={HeroImg} alt="GuruLab Hero Image" className="block h-[33dvh] object-cover" />
       <article className="mx-auto flex max-w-screen-2xl flex-col gap-16 px-6 py-16 sm:px-8 md:px-20 md:py-40">
         <section>
           <ArticleHeaderWrapper>
@@ -54,31 +54,50 @@ export default function GuruLabProjectPage() {
           </ArticleParagraphWrapper>
         </section>
         <section>
-          <div className="grid grid-cols-4 items-center gap-x-32">
+          <div className="grid grid-cols-2 grid-rows-3 items-center gap-y-6 sm:gap-x-8 md:gap-x-16 lg:grid-cols-4 lg:grid-rows-1 lg:gap-y-0 xl:gap-x-32">
             <div className="font-bold">
-              <GradientText as="h3" className="mb-5">
-                Role
-              </GradientText>
-              <p>Freelance Web Designer and Developer</p>
+              <ArticleParagraph className="text-gradient !mb-2 sm:mb-6">
+                <span className="text-transparent">Role</span>
+              </ArticleParagraph>
+              <ArticleParagraph className="!mb-0 text-light-100">
+                Freelance Web Designer and Developer
+              </ArticleParagraph>
             </div>
             <div className="font-bold">
-              <GradientText as="h3" className="mb-5">
-                Duration
-              </GradientText>
-              <p>Start Dec 2021</p>
-              <p>End Mar 2023</p>
+              <ArticleParagraph className="text-gradient !mb-2 sm:mb-6">
+                <span className="text-transparent">Duration</span>
+              </ArticleParagraph>
+              <ArticleParagraph className="!mb-0 text-light-100">Start Dec 2021</ArticleParagraph>
+              <ArticleParagraph className="!mb-0 text-light-100">End Mar 2023</ArticleParagraph>
             </div>
             <div className="font-bold">
-              <GradientText as="h3" className="mb-5">
-                Tools
-              </GradientText>
-              <p>Figma, HTML, CSS, JS, JQuery, Squarespace</p>
+              <ArticleParagraph className="text-gradient !mb-2 sm:mb-6">
+                <span className="text-transparent">Tools</span>
+              </ArticleParagraph>
+              <ArticleParagraph className="!mb-0 text-light-100">
+                Figma, HTML, CSS, JS, JQuery, Squarespace
+              </ArticleParagraph>
             </div>
-            <Magnetic influence={24} className="rounded-full">
-              <Button intent="primary" className="aspect-square w-full p-0">
+            <Magnetic
+              influence={24}
+              className="col-start-2 row-span-3 row-start-1 aspect-square max-h-[250px] w-full max-w-[250px] justify-self-end rounded-full lg:col-start-4 lg:row-span-1 lg:row-start-1 lg:h-auto lg:max-h-[200px]"
+            >
+              <ButtonLink
+                intent="primary"
+                href="https://www.mygurulab.com/"
+                className="h-full w-full p-0"
+                target="_blank"
+              >
                 Visit Site
-              </Button>
+              </ButtonLink>
             </Magnetic>
+            {/* <ButtonLink
+              intent="primary"
+              href="https://www.mygurulab.com/"
+              className="aspect-square w-full p-0"
+            >
+              Visit Site
+            </ButtonLink> */}
           </div>
         </section>
         <section>

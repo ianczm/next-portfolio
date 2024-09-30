@@ -14,7 +14,11 @@ export default function ButtonLink({
   ...props
 }: ButtonLinkProps) {
   return (
-    <Link href={href ?? "/"} {...props} className={cn(buttonStyles({ intent }), className)}>
+    <Link
+      href={href ?? "/"}
+      {...props}
+      className={cn(buttonStyles({ intent }), "flex items-center justify-center", className)}
+    >
       <div className="font-bold">{children}</div>
     </Link>
   );
