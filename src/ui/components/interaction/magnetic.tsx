@@ -19,7 +19,7 @@ interface MagneticProps extends ComponentProps<"div"> {
 export default function Magnetic({ children, influence = 5, className }: MagneticProps) {
   const ref = useRef<HTMLDivElement>(null);
 
-  const { contextSafe } = useGSAP({ dependencies: [], scope: ref });
+  const { contextSafe } = useGSAP({ dependencies: [ref, children], scope: ref });
 
   const onMouseMove: MouseEventHandler<HTMLDivElement> = contextSafe((e) => {
     const eventWrapper = MouseEventElementWrapper.create(e.nativeEvent, ref.current!);

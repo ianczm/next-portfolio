@@ -43,7 +43,7 @@ export function ArticleImageParallax({
         },
       );
     },
-    { dependencies: [children], scope: containerRef },
+    { dependencies: [children, containerRef, subjectRef], scope: containerRef },
   );
 
   return (
