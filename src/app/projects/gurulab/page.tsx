@@ -54,8 +54,8 @@ export default function GuruLabProjectPage() {
           </ArticleParagraphWrapper>
         </section>
         <section>
-          <div className="grid grid-cols-2 grid-rows-3 items-center gap-y-6 sm:gap-x-8 md:gap-x-16 lg:grid-cols-4 lg:grid-rows-1 lg:gap-y-0 xl:gap-x-32">
-            <div className="font-bold">
+          <div className="grid grid-cols-2 grid-rows-2 gap-x-8 gap-y-6 md:gap-x-16 lg:grid-cols-4 lg:grid-rows-1 lg:items-center lg:gap-y-0 xl:gap-x-32">
+            <div className="font-bold sm:w-3/4 lg:w-full">
               <ArticleParagraph className="text-gradient !mb-2 sm:mb-6">
                 <span className="text-transparent">Role</span>
               </ArticleParagraph>
@@ -63,14 +63,16 @@ export default function GuruLabProjectPage() {
                 Freelance Web Designer and Developer
               </ArticleParagraph>
             </div>
-            <div className="font-bold">
+            <div className="font-bold sm:w-3/4 lg:w-full">
               <ArticleParagraph className="text-gradient !mb-2 sm:mb-6">
                 <span className="text-transparent">Duration</span>
               </ArticleParagraph>
-              <ArticleParagraph className="!mb-0 text-light-100">Start Dec 2021</ArticleParagraph>
-              <ArticleParagraph className="!mb-0 text-light-100">End Mar 2023</ArticleParagraph>
+              <div>
+                <ArticleParagraph className="!mb-0 text-light-100">Start Dec 2021</ArticleParagraph>
+                <ArticleParagraph className="!mb-0 text-light-100">End Mar 2023</ArticleParagraph>
+              </div>
             </div>
-            <div className="font-bold">
+            <div className="font-bold sm:w-3/4 lg:w-full">
               <ArticleParagraph className="text-gradient !mb-2 sm:mb-6">
                 <span className="text-transparent">Tools</span>
               </ArticleParagraph>
@@ -80,24 +82,17 @@ export default function GuruLabProjectPage() {
             </div>
             <Magnetic
               influence={24}
-              className="col-start-2 row-span-3 row-start-1 aspect-square max-h-[250px] w-full max-w-[250px] justify-self-end rounded-full lg:col-start-4 lg:row-span-1 lg:row-start-1 lg:h-auto lg:max-h-[200px]"
+              className="w-fit place-self-end justify-self-start rounded-full lg:col-start-4 lg:row-span-1 lg:row-start-1 lg:aspect-square lg:h-auto lg:max-h-[200px] lg:w-full lg:max-w-[200px] lg:justify-self-end"
             >
               <ButtonLink
                 intent="primary"
                 href="https://www.mygurulab.com/"
-                className="h-full w-full p-0"
+                className="lg:h-full lg:w-full lg:p-0"
                 target="_blank"
               >
                 Visit Site
               </ButtonLink>
             </Magnetic>
-            {/* <ButtonLink
-              intent="primary"
-              href="https://www.mygurulab.com/"
-              className="aspect-square w-full p-0"
-            >
-              Visit Site
-            </ButtonLink> */}
           </div>
         </section>
         <section>

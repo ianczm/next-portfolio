@@ -5,7 +5,7 @@ export function ArticleParagraph({ children, className, ...rest }: ComponentProp
   return (
     <p
       className={cn(
-        "mb-6 text-pretty text-base font-bold leading-relaxed text-light-100/75 sm:mb-10 sm:text-lg sm:leading-normal xl:text-xl",
+        "mb-6 text-pretty text-base font-bold leading-relaxed text-light-100/75 last:mb-0 sm:text-lg sm:leading-normal xl:mb-10 xl:text-xl",
         className,
       )}
       {...rest}

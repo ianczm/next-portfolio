@@ -56,20 +56,15 @@ export default function Footer({ className, ...props }: ComponentProps<"div">) {
         </div>
       </div>
       {/*  */}
-      <div className="row-start-4 flex items-end gap-6 lg:row-auto">
-        <Paragraph1>
-          <InlineLink href="">
-            <span className="text-primary-400">@ 2024</span> Ian Chong.
-          </InlineLink>
-        </Paragraph1>
-      </div>
-      {/*  */}
       <div className="mb-10 w-full items-end lg:mb-0">
         <Paragraph1>
           Designed in{" "}
           <InlineLink href="https://www.figma.com/" underline>
-            Figma.
-          </InlineLink>{" "}
+            Figma
+          </InlineLink>
+          .
+        </Paragraph1>
+        <Paragraph1>
           Built with{" "}
           <InlineLink href="https://react.dev/" underline>
             React
@@ -78,12 +73,22 @@ export default function Footer({ className, ...props }: ComponentProps<"div">) {
           <InlineLink href="https://nextjs.org/" underline>
             Next.js
           </InlineLink>
-          .<br />
+          .
+        </Paragraph1>
+        <Paragraph1>
           Styled with{" "}
           <InlineLink href="https://tailwindcss.com/" underline>
             Tailwind CSS
           </InlineLink>
           .
+        </Paragraph1>
+      </div>
+      {/*  */}
+      <div className="flex items-end gap-6">
+        <Paragraph1>
+          <InlineLink href="">
+            <span className="text-primary-400">@ 2024</span> Ian Chong.
+          </InlineLink>
         </Paragraph1>
       </div>
     </div>
