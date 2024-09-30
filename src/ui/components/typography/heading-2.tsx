@@ -7,7 +7,7 @@ export function Heading2({ children, className, ...props }: Heading2Props) {
   return (
     <GradientText
       as="h2"
-      className="text-lg font-bold uppercase tracking-widest xl:text-xl"
+      className="text-base font-bold uppercase tracking-widest md:text-lg xl:text-xl"
       {...props}
     >
       {children}

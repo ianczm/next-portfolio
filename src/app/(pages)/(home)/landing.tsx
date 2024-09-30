@@ -10,7 +10,7 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
   return (
     <div
       className={cn(
-        "mx-auto my-auto flex h-[calc(100vh-5vw)] min-h-fit max-w-screen-2xl flex-col justify-center px-8 md:px-20",
+        "mx-auto my-auto flex h-[calc(100dvh-5vw)] min-h-fit max-w-screen-2xl flex-col justify-center px-6 sm:px-8 md:px-20",
         className,
       )}
       {...props}
@@ -19,11 +19,11 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
         {/* Main landing */}
         <div className="flex max-w-[810px] flex-col gap-10">
           <Heading2>
-            Hey, I'm Ian <span className="text-light-100">👋</span>
+            Hey, I'm Ian Chong <span className="text-light-100">👋</span>
           </Heading2>
           <Heading1>
-            I'm a <span className="text-transparent">software engineer</span> who loves creating for{" "}
-            <span className="text-transparent">the web</span>
+            I'm a <span className="text-transparent">fullstack developer</span> with a fascination
+            for <span className="text-transparent">the web</span>
           </Heading1>
           <div>
             <Paragraph2>
@@ -37,7 +37,7 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
               </InlineLink>
             </Paragraph2>
           </div>
-          <div className="mt-4 flex gap-4">
+          <div className="mt-4 flex gap-3 md:gap-4">
             <Button intent="primary">Contact</Button>
             <Button>Projects</Button>
           </div>

@@ -9,23 +9,23 @@ export default function Footer({ className, ...props }: ComponentProps<"div">) {
   return (
     <div
       className={cn(
-        "mx-auto grid max-w-screen-2xl p-8 pt-16 md:p-20 md:pt-40 lg:grid-cols-[3fr_2fr] lg:grid-rows-[auto_auto] lg:gap-32",
+        "mx-auto grid max-w-screen-2xl p-6 pt-16 sm:p-8 md:p-20 md:pt-40 lg:grid-cols-[3fr_2fr] lg:grid-rows-[auto_auto] lg:gap-32",
       )}
       {...props}
     >
       {/*  */}
-      <div className={cn("mb-32 flex flex-col gap-10 lg:mb-0")}>
+      <div className={cn("mb-16 flex flex-col gap-10 lg:mb-0")}>
         <Heading2>Get In Touch</Heading2>
         <Heading1 noGradient>Have an interesting opportunity to share?</Heading1>
-        <a href="/" className="text-gradient text-4xl font-bold xl:text-5xl">
+        <a href="/" className="text-gradient text-3xl font-bold sm:text-4xl xl:text-5xl">
           <span className="text-transparent underline">Let's talk about it!</span>
         </a>
       </div>
       {/*  */}
-      <div className={cn("mb-32 flex gap-32 lg:mb-0 lg:gap-16")}>
-        <div className="flex flex-col gap-10 lg:w-full">
+      <div className={cn("mb-16 flex gap-16 sm:gap-32 lg:mb-0 lg:gap-16")}>
+        <div className="flex flex-col gap-4 lg:w-full lg:gap-10">
           <Heading2>Explore</Heading2>
-          <ul className="flex flex-col gap-3 text-xl font-bold xl:gap-5 xl:text-2xl">
+          <ul className="flex flex-col gap-3 text-lg font-bold sm:text-xl xl:gap-5 xl:text-2xl">
             <li>
               <InlineLink href="/">Home</InlineLink>
             </li>
@@ -37,9 +37,9 @@ export default function Footer({ className, ...props }: ComponentProps<"div">) {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col gap-10 lg:w-full">
+        <div className="flex flex-col gap-4 lg:w-full lg:gap-10">
           <Heading2>Connect</Heading2>
-          <ul className="flex flex-col gap-3 text-xl font-bold xl:gap-5 xl:text-2xl">
+          <ul className="flex flex-col gap-3 text-lg font-bold sm:text-xl xl:gap-5 xl:text-2xl">
             <li>
               <InlineLink href="">GitHub</InlineLink>
             </li>
@@ -78,7 +78,8 @@ export default function Footer({ className, ...props }: ComponentProps<"div">) {
           <InlineLink href="https://nextjs.org/" underline>
             Next.js
           </InlineLink>
-          . Styled with{" "}
+          .<br />
+          Styled with{" "}
           <InlineLink href="https://tailwindcss.com/" underline>
             Tailwind CSS
           </InlineLink>

@@ -10,7 +10,7 @@ const buttonStyles = cva(
     "py-6",
     "transition-all",
     "backdrop-blur-xl",
-    "text-lg xl:text-xl",
+    "text-base sm:text-lg xl:text-xl",
   ],
   {
     variants: {

@@ -13,7 +13,7 @@ export function ProjectsSection({ className, ...props }: ComponentProps<"div">) 
   return (
     <div
       className={cn(
-        "mx-auto flex max-w-screen-2xl flex-col gap-16 px-8 py-16 md:px-20 md:py-40",
+        "mx-auto flex max-w-screen-2xl flex-col gap-16 px-6 py-16 sm:px-8 md:px-20 md:py-40",
         className,
       )}
       {...props}
@@ -26,9 +26,12 @@ export function ProjectsSection({ className, ...props }: ComponentProps<"div">) 
         </Heading1>
       </div>
       {/* Projects container */}
-      <div className="flex flex-col gap-10 lg:flex-row">
+      <div className="flex flex-col gap-6 sm:gap-10 lg:flex-row">
         {projectColumns.map((column, index) => (
-          <div key={index} className={cn(`flex flex-col gap-10`, { "lg:pt-36": index === 0 })}>
+          <div
+            key={index}
+            className={cn(`flex flex-col gap-6 sm:gap-10`, { "lg:pt-36": index === 0 })}
+          >
             {column.map((project) => (
               <Card
                 key={project.id}

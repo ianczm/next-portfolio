@@ -9,7 +9,7 @@ import { cn } from "../utils/tailwind";
 export default function NavBar({ className, ...props }: ComponentProps<"div">) {
   return (
     <nav className={cn("absolute left-0 top-0 z-50 w-full", className)} {...props}>
-      <div className="mx-auto flex max-w-screen-2xl items-center justify-between p-8 md:px-20 md:py-10">
+      <div className="mx-auto flex max-w-screen-2xl items-center justify-between p-6 sm:p-8 md:px-20 md:py-10">
         <InlineLink href="/" className="-m-4 p-4">
           <IanczmLogo />
         </InlineLink>
