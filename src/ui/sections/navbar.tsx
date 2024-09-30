@@ -1,6 +1,7 @@
 import { MenuIcon } from "lucide-react";
 import { ComponentProps } from "react";
 import Button from "../components/button";
+import ButtonLink from "../components/button-link";
 import InlineLink from "../components/inline-link";
 import IanczmLogo from "../components/logo";
 import NavLink from "../components/nav-link";
@@ -27,9 +28,13 @@ export default function NavBar({ className, ...props }: ComponentProps<"div">) {
           <Button intent="primary">Contact</Button>
         </div>
         {/* Mobile */}
-        <Button intent="primary" className="block aspect-square p-5 md:hidden">
+        <ButtonLink
+          intent="primary"
+          href="mailto:ianczm@live.co.uk"
+          className="block aspect-square p-5 md:hidden"
+        >
           <MenuIcon />
-        </Button>
+        </ButtonLink>
       </div>
     </nav>
   );

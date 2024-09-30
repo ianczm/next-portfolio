@@ -1,4 +1,4 @@
-import Button from "@/ui/components/button";
+import ButtonLink from "@/ui/components/button-link";
 import InlineLink from "@/ui/components/inline-link";
 import Magnetic from "@/ui/components/interaction/magnetic";
 import { Heading1, Heading2, Paragraph2 } from "@/ui/components/typography";
@@ -38,8 +38,10 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
             </Paragraph2>
           </div>
           <div className="mt-4 flex gap-3 md:gap-4">
-            <Button intent="primary">Contact</Button>
-            <Button>Projects</Button>
+            <ButtonLink intent="primary" href="mailto:ianczm@live.co.uk">
+              Contact
+            </ButtonLink>
+            <ButtonLink href="/projects">Projects</ButtonLink>
           </div>
         </div>
         {/* Channels */}

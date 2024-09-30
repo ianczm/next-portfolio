@@ -2,7 +2,7 @@ import { cva, VariantProps } from "class-variance-authority";
 import { ComponentProps } from "react";
 import { cn } from "../utils/tailwind";
 
-const buttonStyles = cva(
+export const buttonStyles = cva(
   [
     "rounded-full",
     "border-2",
