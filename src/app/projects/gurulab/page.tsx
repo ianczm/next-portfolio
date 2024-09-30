@@ -10,7 +10,9 @@ import ReportSelectImg from "@/assets/images/projects/gurulab/report-select.png"
 import TutorWireframeImg from "@/assets/images/projects/gurulab/tutor-wireframe.png";
 import TypesettingImg from "@/assets/images/projects/gurulab/typesetting.png";
 import WireframingImg from "@/assets/images/projects/gurulab/wireframing.png";
+import ArticleHeaderWrapper from "@/ui/components/articles/article-header-wrapper";
 import { ArticleParagraph } from "@/ui/components/articles/article-paragraph";
+import ArticleParagraphWrapper from "@/ui/components/articles/article-paragraph-wrapper";
 import Button from "@/ui/components/button";
 import Magnetic from "@/ui/components/interaction/magnetic";
 import { ArticleImageParallax } from "@/ui/components/interaction/parallax";
@@ -21,15 +23,15 @@ export default function GuruLabProjectPage() {
   return (
     <>
       <Image src={HeroImg} alt="GuruLab Hero Image" className="block h-[600px] object-cover" />
-      <article className="mx-auto flex max-w-screen-2xl flex-col gap-32 px-20 py-40">
+      <article className="mx-auto flex max-w-screen-2xl flex-col gap-16 px-6 py-16 sm:px-8 md:px-20 md:py-40">
         <section>
-          <div className="mb-10 flex w-1/2 flex-col gap-10">
+          <ArticleHeaderWrapper>
             <Heading2>Project Diary</Heading2>
             <Heading1 className="text-balance">
               A <span className="text-transparent">fresh new look</span> for GuruLab's official site
             </Heading1>
-          </div>
-          <div className="columns-2 gap-32">
+          </ArticleHeaderWrapper>
+          <ArticleParagraphWrapper>
             <ArticleParagraph>
               GuruLab is an edutech startup that was quickly growing in popularity among young
               English learners. Branding on social media was kicking into gear, which meant it was
@@ -49,7 +51,7 @@ export default function GuruLabProjectPage() {
               Thank you GuruLab for trusting me at this crucial stage of their growth and letting me
               grow alongside them. So began my first step into the world of web development.
             </ArticleParagraph>
-          </div>
+          </ArticleParagraphWrapper>
         </section>
         <section>
           <div className="grid grid-cols-4 items-center gap-x-32">
@@ -73,7 +75,7 @@ export default function GuruLabProjectPage() {
               <p>Figma, HTML, CSS, JS, JQuery, Squarespace</p>
             </div>
             <Magnetic influence={24} className="rounded-full">
-              <Button intent="primary" className="aspect-square w-full">
+              <Button intent="primary" className="aspect-square w-full p-0">
                 Visit Site
               </Button>
             </Magnetic>
@@ -85,12 +87,12 @@ export default function GuruLabProjectPage() {
           </ArticleImageParallax>
         </section>
         <section>
-          <div className="mb-10 flex w-1/2 flex-col gap-10">
+          <ArticleHeaderWrapper>
             <Heading1 className="text-balance">
               <span className="text-transparent">A glance</span> back at v1 😳
             </Heading1>
-          </div>
-          <div className="columns-2 gap-32">
+          </ArticleHeaderWrapper>
+          <ArticleParagraphWrapper>
             <ArticleParagraph>
               Embarrassingly enough, v1 was the product of a young, naive me. With my newfound
               knowledge of how to center a div, I volunteered my web development skills to build the
@@ -109,7 +111,7 @@ export default function GuruLabProjectPage() {
               Going into v2, I knew I wanted to bring out more of that cheerful yet bold GuruLab
               brand presence. I wanted an impression that was consistent across all pages.
             </ArticleParagraph>
-          </div>
+          </ArticleParagraphWrapper>
         </section>
         <section>
           <ArticleImageParallax src={Version1Img} alt="GuruLab v2" imageClassname="aspect-[1.8]">
@@ -117,13 +119,13 @@ export default function GuruLabProjectPage() {
           </ArticleImageParallax>
         </section>
         <section>
-          <div className="mb-10 flex w-1/2 flex-col gap-10">
+          <ArticleHeaderWrapper>
             <Heading1 className="text-balance">
               From a <span className="text-transparent">feeling</span> to a system for{" "}
               <span className="text-transparent">design</span>
             </Heading1>
-          </div>
-          <div className="columns-2 gap-32">
+          </ArticleHeaderWrapper>
+          <ArticleParagraphWrapper>
             <ArticleParagraph>Playful, friendly and welcoming.</ArticleParagraph>
             <ArticleParagraph>
               Matching the warm tone of the copywriting and giving the illustrations a place to
@@ -152,10 +154,10 @@ export default function GuruLabProjectPage() {
               One side takes the background gradient to highlight something important. The other
               remains neutral for the details and allows CTAs to shine through.
             </ArticleParagraph>
-          </div>
+          </ArticleParagraphWrapper>
         </section>
-        <section className="grid grid-cols-2 gap-x-32">
-          <div className="mt-32 flex flex-col gap-16">
+        <section className="grid gap-16 sm:grid-cols-2 sm:gap-x-8 md:gap-x-16 xl:gap-x-32">
+          <div className="flex flex-col gap-16 sm:mt-32">
             <ArticleImageParallax src={InputsImg} alt="Inputs" imageClassname="aspect-[1.65]">
               Input error states
             </ArticleImageParallax>
@@ -181,12 +183,12 @@ export default function GuruLabProjectPage() {
           </div>
         </section>
         <section>
-          <div className="mb-10 flex w-1/2 flex-col gap-10">
+          <ArticleHeaderWrapper>
             <Heading1 className="text-balance">
               Prototyping and <span className="text-transparent">building static pages</span>
             </Heading1>
-          </div>
-          <div className="columns-2 gap-32">
+          </ArticleHeaderWrapper>
+          <ArticleParagraphWrapper>
             <ArticleParagraph>
               This stage was where the real fun began. From the brief and the calls that followed, I
               would digest context about the psychology of parents and students, their navigation
@@ -210,7 +212,7 @@ export default function GuruLabProjectPage() {
               It wasn't exactly pretty, but it made working on the site faster and easier to
               maintain. Squarespace was certainly an interesting challenge to take on.
             </ArticleParagraph>
-          </div>
+          </ArticleParagraphWrapper>
         </section>
         <section>
           <ArticleImageParallax
@@ -223,12 +225,12 @@ export default function GuruLabProjectPage() {
           </ArticleImageParallax>
         </section>
         <section>
-          <div className="mb-10 flex w-1/2 flex-col gap-10">
+          <ArticleHeaderWrapper>
             <Heading1 className="text-balance">
               Loading data with <span className="text-transparent">dynamic pages</span>
             </Heading1>
-          </div>
-          <div className="columns-2 gap-32">
+          </ArticleHeaderWrapper>
+          <ArticleParagraphWrapper>
             <ArticleParagraph>
               The semester was ending. Parents and students were about to get a report, and it would
               come in the form of a highly-personalised page featuring performance scores and
@@ -252,9 +254,9 @@ export default function GuruLabProjectPage() {
               behind-the-scenes integrations across the site such as analytics, newsletter
               subscriptions, referral links, sales and more.
             </ArticleParagraph>
-          </div>
+          </ArticleParagraphWrapper>
         </section>
-        <section className="grid grid-cols-2 gap-x-32">
+        <section className="grid gap-16 sm:grid-cols-2 sm:gap-x-8 md:gap-x-16 xl:gap-x-32">
           <ArticleImageParallax
             src={PersonalizationImg}
             alt="Personalized Report Sections"
@@ -266,18 +268,18 @@ export default function GuruLabProjectPage() {
           <ArticleImageParallax
             src={ReportSelectImg}
             alt="Report Selection"
-            imageClassname="mt-32 aspect-[0.825]"
+            imageClassname="sm:mt-32 aspect-[0.825]"
           >
             Parents can select which semester report to view
           </ArticleImageParallax>
         </section>
         <section>
-          <div className="mb-10 flex w-1/2 flex-col gap-10">
+          <ArticleHeaderWrapper>
             <Heading1 className="text-balance">
               <span className="text-transparent">My takeaways</span> at the end of the day
             </Heading1>
-          </div>
-          <div className="columns-2 gap-32">
+          </ArticleHeaderWrapper>
+          <ArticleParagraphWrapper>
             <ArticleParagraph>
               As a first-time freelancer and a beginner to web development, working on a project
               like this was way out of my comfort zone.
@@ -308,7 +310,7 @@ export default function GuruLabProjectPage() {
               Sometimes, the best way is the simplest way. It can feel unconventional, but all it
               takes is an open mind and a listening ear to truly understand what the users need.
             </ArticleParagraph>
-          </div>
+          </ArticleParagraphWrapper>
         </section>
         <section>
           <ArticleImageParallax

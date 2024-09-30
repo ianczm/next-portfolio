@@ -2,6 +2,7 @@ import { cn } from "@/ui/utils/tailwind";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import { ComponentProps } from "react";
+import { ArticleParagraph } from "./article-paragraph";
 
 interface ArticleImageProps extends ComponentProps<"div"> {
   src: string | StaticImport;
@@ -28,7 +29,7 @@ export function ArticleImage({
           <Image src={src} alt={alt} className="h-full min-h-full w-full min-w-full" />
         </div>
       </div>
-      <span className="font-bold text-light-100/50">{children}</span>
+      <ArticleParagraph>{children}</ArticleParagraph>
     </div>
   );
 }

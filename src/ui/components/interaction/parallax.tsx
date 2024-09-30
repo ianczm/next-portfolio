@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import { ComponentProps, useRef } from "react";
+import { ArticleParagraph } from "../articles/article-paragraph";
 
 interface ArticleImageProps extends ComponentProps<"div"> {
   src: string | StaticImport;
@@ -13,8 +14,6 @@ interface ArticleImageProps extends ComponentProps<"div"> {
   imageClassname?: string;
   useGradient?: boolean;
 }
-
-const parallaxStrength = 50;
 
 export function ArticleImageParallax({
   children,
@@ -63,7 +62,7 @@ export function ArticleImageParallax({
           <Image src={src} alt={alt} className="block h-full min-h-full w-full min-w-full" />
         </div>
       </div>
-      <span className="font-bold text-light-100/50">{children}</span>
+      <ArticleParagraph className="mb-0 font-bold text-light-100/50">{children}</ArticleParagraph>
     </div>
   );
 }
