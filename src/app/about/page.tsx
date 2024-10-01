@@ -1,6 +1,6 @@
 import Redirect from "@/ui/sections/redirect";
 
-export default function ProjectsPage() {
+export default function AboutPage() {
   return (
     <Redirect
       header="About Me"
