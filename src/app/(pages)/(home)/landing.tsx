@@ -19,7 +19,7 @@ export function LandingSection({ className, ...props }: ComponentProps<"div">) {
         {/* Main landing */}
         <div className="flex max-w-[810px] flex-col gap-10">
           <Heading2>
-            Hey, I'm Ian Chong <span className="text-light-100">👋</span>
+            Hey there, I'm Ian <span className="text-light-100">👋</span>
           </Heading2>
           <Heading1>
             I'm a <span className="text-transparent">fullstack developer</span> with a fascination
