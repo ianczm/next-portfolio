@@ -8,7 +8,7 @@ import { ComponentProps } from "react";
 
 export function HeroBanner({ className, ...props }: ComponentProps<"a">) {
   return (
-    <Link className={cn("relative", className)} {...props} href="/projects/gurulab">
+    <Link className={cn("relative block", className)} {...props} href="/projects/gurulab">
       <Image
         src={HeroGurulab}
         alt="Gurulab"
