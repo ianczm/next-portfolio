@@ -15,7 +15,7 @@ export function HeroBanner({ className, ...props }: ComponentProps<"a">) {
         className="h-auto min-h-[475px] w-full object-cover object-[25%_50%] sm:min-h-[500px] sm:object-[15%_50%] md:min-h-[750px] md:object-[20%_20%]"
       />
       <div className="absolute left-0 top-0 flex h-full w-full flex-col justify-end bg-dark-800/0 pb-8 transition-colors hover:bg-dark-800/20">
-        <div className="flex max-w-screen-2xl flex-col gap-6 p-6 sm:p-8 md:p-20">
+        <div className="flex w-full max-w-screen-2xl flex-col gap-6 p-6 sm:p-8 md:p-20">
           <Heading1 noGradient>
             Crafting an experience <br /> means the careful blend <br /> of feel and function
           </Heading1>
