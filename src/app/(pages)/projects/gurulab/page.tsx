@@ -17,6 +17,7 @@ import ButtonLink from "@/ui/components/button-link";
 import Magnetic from "@/ui/components/interaction/magnetic";
 import { ArticleImageParallax } from "@/ui/components/interaction/parallax";
 import { Heading1, Heading2 } from "@/ui/components/typography";
+import Footer from "@/ui/sections/footer";
 import Image from "next/image";
 
 export default function GuruLabProjectPage() {
@@ -338,6 +339,7 @@ export default function GuruLabProjectPage() {
         </section>
       </article>
       <TestimonialsSection />
+      <Footer />
     </>
   );
 }
