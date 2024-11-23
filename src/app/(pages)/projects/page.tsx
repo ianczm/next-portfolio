@@ -1,6 +1,7 @@
 import { HOME_PROJECTS } from "@/data/frontend/projects";
 import { Card } from "@/ui/components/card";
 import { Heading1, Heading2 } from "@/ui/components/typography";
+import Footer from "@/ui/sections/footer";
 import { cn } from "@/ui/utils/tailwind";
 
 export default function ProjectsGalleryPage() {
@@ -45,6 +46,7 @@ export default function ProjectsGalleryPage() {
           ))}
         </div>
       </div>
+      <Footer isSolidBackground />
     </>
   );
 }

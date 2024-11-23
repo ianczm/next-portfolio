@@ -1,6 +1,5 @@
 import LandingCanvas3D from "@/ui/components/3d/landing-canvas";
 import { Providers } from "@/ui/providers/providers";
-import Footer from "@/ui/sections/footer";
 import NavBar from "@/ui/sections/navbar";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
@@ -23,10 +22,7 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
           <NavBar className="fixed" />
           <main className="relative">
             <LandingCanvas3D className="fixed -z-50 h-screen w-screen" />
-            <div>
-              {children}
-              <Footer />
-            </div>
+            <div>{children}</div>
           </main>
         </body>
       </Providers>
