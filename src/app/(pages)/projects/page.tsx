@@ -1,5 +1,5 @@
 import { PROJECT_COLUMNS } from "@/data/frontend/projects";
-import { Card } from "@/ui/components/card";
+import ProjectCard from "@/ui/components/project-card";
 import { Heading1, Heading2 } from "@/ui/components/typography";
 import Footer from "@/ui/sections/footer";
 import { cn } from "@/ui/utils/tailwind";
@@ -27,15 +27,7 @@ export default function ProjectsGalleryPage() {
               className={cn(`flex flex-col gap-6 sm:gap-10`, { "lg:pt-36": index === 0 })}
             >
               {column.map((project) => (
-                <Card
-                  key={project.id}
-                  src={project.image}
-                  title={project.title}
-                  href={project.href}
-                  className="shadow-xl"
-                >
-                  {project.description}
-                </Card>
+                <ProjectCard key={project.id} project={project} />
               ))}
             </div>
           ))}
