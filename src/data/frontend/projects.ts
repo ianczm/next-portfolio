@@ -10,7 +10,28 @@ type SimpleProject = {
   href?: string;
 };
 
-export const HOME_PROJECTS: SimpleProject[] = [
+export const PROJECTS_COLUMN_RIGHT: SimpleProject[] = [
+  {
+    id: 2,
+    image: ShotdeskJourneyOfLife,
+    title: "Portfolio v1",
+    description: "A personal project for me to try out new things",
+  },
+  {
+    id: 4,
+    image: ShotdeskJourneyOfLife,
+    title: "Southeast Aerials",
+    description: "Web design for cutting-edge drone services",
+  },
+  {
+    id: 6,
+    image: ShotdeskGurulab,
+    title: "More Projects",
+    description: "View other exciting ideas that I've been working on",
+  },
+];
+
+export const PROJECTS_COLUMN_LEFT: SimpleProject[] = [
   {
     id: 1,
     image: ShotdeskGurulab,
@@ -19,21 +40,17 @@ export const HOME_PROJECTS: SimpleProject[] = [
     href: "/projects/gurulab",
   },
   {
-    id: 2,
+    id: 3,
+    image: ShotdeskGurulab,
+    title: "Ecotect",
+    description: "An e-commerce MVP site for a sustainable textiles startup",
+  },
+  {
+    id: 5,
     image: ShotdeskJourneyOfLife,
     title: "Journey of Life",
     description: "Multiplayer game about financial decision-making for an event",
   },
-  {
-    id: 3,
-    image: ShotdeskJourneyOfLife,
-    title: "This Portfolio",
-    description: "Personal project for me to try out new things",
-  },
-  {
-    id: 4,
-    image: ShotdeskGurulab,
-    title: "More Projects",
-    description: "View other exciting ideas that I've been working on",
-  },
 ];
+
+export const PROJECT_COLUMNS: SimpleProject[][] = [PROJECTS_COLUMN_LEFT, PROJECTS_COLUMN_RIGHT];
