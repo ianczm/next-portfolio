@@ -20,7 +20,7 @@ export function HeroBanner({ className, ...props }: ComponentProps<"a">) {
             Crafting an experience <br /> means the careful blend <br /> of feel and function
           </Heading1>
           <div className="flex items-center gap-6 xl:gap-10">
-            <Paragraph2>View the GuruLab Project</Paragraph2>
+            <Paragraph2>View project</Paragraph2>
             <ArrowRight className="flex-shrink-0" size={32} strokeWidth={1.5} />
           </div>
         </div>
